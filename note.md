@@ -6,3 +6,12 @@
 - ❌ Fonction dynamique réflexion html
 - ❌ Repasse images Footer
 - ❌ Repasse inté
+
+TODO 2
+
+- ✅ Repasse Footer
+- ❌ Les fonts aurent !
+- ❌ Images Header
+- ❌ Rélfexion responsive ?
+- ❌récup data dynamique
+- ❌ mettre dans des fichiers de trad

@@ -20,9 +20,10 @@
       format('woff2'); } /* ============================================ CSS
       RESET ============================================ */ * { margin: 0;
       padding: 0; box-sizing: border-box; } table { border-collapse: collapse;
-      border-spacing: 0; width: 100%; } td, th { padding: 0; margin: 0; border:
-      0; } img { border: 0; outline: none; text-decoration: none; display:
-      block; } a { text-decoration: none; }
+      border-spacing: 0; } td, th { padding: 0; margin: 0; border: 0; } img {
+      border: 0; outline: none; text-decoration: none; display: block; width:
+      auto !important; max-width: 100%; height: auto; } a { text-decoration:
+      none; }
     </mj-style>
     <mj-attributes>
       <mj-all font-family="Inter, Arial, sans-serif" />
@@ -168,7 +169,6 @@
             padding="32px 0 0"
             inner-padding="10px 24px"
             align="center"
-            width="auto"
           >
             Voir la retrospective vidéo
           </mj-button>
@@ -473,8 +473,10 @@
       </mj-section>
 
       <!-- Footer -->
-      <mj-section padding="20px 0" background-color="#ff0000">
-        <mj-column padding="32px 16px">
+      <!-- Footer -->
+      <mj-section padding="32px 16px 0" background-color="#FFFFFF">
+        <mj-column padding="0">
+          <!-- Suivez-nous -->
           <mj-text
             align="center"
             font-family="Inter, Arial, sans-serif"
@@ -482,18 +484,46 @@
             line-height="24px"
             color="#869098"
             font-weight="500"
+            padding="0 0 4px"
           >
             Suivez-nous
           </mj-text>
-          <mj-social
-            font-size="15px"
-            icon-size="48px"
-            mode="horizontal"
-            padding="0 0 16px"
-          >
-            <mj-social-element name="facebook" href="#" />
-            <mj-social-element name="instagram" href="#" />
-          </mj-social>
+        </mj-column>
+      </mj-section>
+
+      <!-- Social Icons -->
+      <mj-section padding="0 0 16px" background-color="#FFFFFF">
+        <mj-group>
+          <mj-column width="50%" padding="0">
+            <mj-image
+              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/facebook.svg"
+              alt="Facebook"
+              href="#"
+              width="48px"
+              height="48px"
+              fluid-on-mobile="false"
+              align="right"
+              padding="0 8px 0 0"
+            />
+          </mj-column>
+          <mj-column width="50%" padding="0">
+            <mj-image
+              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/instagram.svg"
+              alt="Instagram"
+              href="#"
+              width="48px"
+              height="48px"
+              fluid-on-mobile="false"
+              align="left"
+              padding="0 0 0 8px"
+            />
+          </mj-column>
+        </mj-group>
+      </mj-section>
+
+      <!-- Téléchargez l'app -->
+      <mj-section padding="0" background-color="#FFFFFF">
+        <mj-column padding="0">
           <mj-text
             align="center"
             font-family="Inter, Arial, sans-serif"
@@ -501,6 +531,7 @@
             line-height="24px"
             color="#869098"
             font-weight="500"
+            padding="0 0 8px"
           >
             Téléchargez l'app Planity
           </mj-text>
@@ -508,29 +539,37 @@
       </mj-section>
 
       <!-- App Stores -->
-      <mj-section padding="0" background-color="#FFFFFF">
+      <mj-section padding="0 0 32px" background-color="#FFFFFF">
         <mj-group>
-          <mj-column width="50%">
+          <mj-column width="50%" padding="0">
             <mj-image
-              src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr?size=250x83&releaseDate=1288838400"
+              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/app-store.png"
               alt="App Store"
               href="#"
-              padding="0 4px"
+              width="133px"
+              height="40px"
+              fluid-on-mobile="false"
+              align="right"
+              padding="0 8px 0 0"
             />
           </mj-column>
-          <mj-column width="50%">
+          <mj-column width="50%" padding="0">
             <mj-image
-              src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png"
+              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/google-play.png"
               alt="Google Play"
               href="#"
-              padding="0 4px"
+              width="133px"
+              height="40px"
+              fluid-on-mobile="false"
+              align="left"
+              padding="0 0 0 8px"
             />
           </mj-column>
         </mj-group>
       </mj-section>
 
       <!-- Footer Copyright -->
-      <mj-section padding="0 0 20px" background-color="#FFFFFF">
+      <mj-section padding="0 16px 32px" background-color="#FFFFFF">
         <mj-column padding="0">
           <mj-text
             align="center"
@@ -538,6 +577,7 @@
             font-size="12px"
             line-height="16px"
             color="#869098"
+            padding="0 0 8px"
           >
             © 2026 Planity. Tous droits réservés<br />
             contact@planity.com<br />
@@ -550,11 +590,11 @@
             line-height="16px"
             color="#869098"
           >
-            <a href="#" style="color: #869098; text-decoration: none"
+            <a href="#" style="color: #869098; text-decoration: underline"
               >Me désinscrire</a
             >
             <span style="color: #c7cfd7; margin: 0 8px">•</span>
-            <a href="#" style="color: #869098; text-decoration: none"
+            <a href="#" style="color: #869098; text-decoration: underline"
               >Gérer mes préférences</a
             >
           </mj-text>

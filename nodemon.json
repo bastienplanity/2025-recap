@@ -1,7 +1,8 @@
 {
   "watch": ["template.mjml"],
-  "ext": "mjml",
-  "ignore": ["output.html", "node_modules"],
-  "exec": "npm run build",
-  "verbose": true
+  "ext": "mjml,json",
+  "ignore": ["output.html", "node_modules", "*.html"],
+  "exec": "node build.js",
+  "verbose": true,
+  "delay": 500
 }

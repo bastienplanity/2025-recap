@@ -2,14 +2,12 @@
   "name": "mailer-template",
   "version": "1.0.0",
   "description": "Template de mail responsive Planity en MJML",
-  "main": "generate-template.js",
+  "main": "build.js",
   "scripts": {
-    "generate": "node generate-template.js",
-    "build": "npm run generate && mjml template.mjml -o output.html",
+    "build": "node build.js",
     "watch": "nodemon",
-    "watch:build": "nodemon --watch template.hbs --watch data.json --ext hbs,json --exec \"npm run build\"",
     "serve": "browser-sync start --server --files 'output.html' --index output.html --no-open",
-    "dev": "concurrently \"npm run watch:build\" \"npm run serve\"",
+    "dev": "concurrently \"npm run watch\" \"npm run serve\"",
     "preview": "npm run build && npm run serve"
   },
   "keywords": [
@@ -21,7 +19,6 @@
   "license": "ISC",
   "devDependencies": {
     "mjml": "^4.15.0",
-    "handlebars": "^4.7.8",
     "nodemon": "^3.0.0",
     "browser-sync": "^2.29.0",
     "concurrently": "^8.2.0"

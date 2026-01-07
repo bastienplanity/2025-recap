@@ -1,14 +1,12 @@
-# Template de Mail Responsive Planity
+# Template de Mail Mobile Planity
 
-Template de mail responsive créé en MJML avec **boucles Handlebars** pour éviter la répétition.
+Template de mail mobile uniquement créé en MJML avec **styles inline maximum**.
 
 ## Structure
 
-- `data.json` : Toutes les données du template (textes, statistiques, liens, etc.)
-- `template.hbs` : Template Handlebars avec **boucles {{#each}}** (comme React !)
-- `generate-template.js` : Script qui compile le template Handlebars en MJML
-- `template.mjml` : Template MJML généré (ne pas éditer directement)
-- `images/` : Images du template (logo, background)
+- `template.mjml` : Template MJML pur avec toutes les données intégrées
+- `build.js` : Script qui compile MJML vers HTML
+- `output.html` : HTML généré (prêt à envoyer)
 
 ## Installation
 
@@ -18,102 +16,77 @@ npm install
 
 ## Utilisation
 
-### 1. Modifier les données
-
-Éditez le fichier `data.json` pour modifier les textes, statistiques, liens, etc.
-
-**Exemple pour modifier les statistiques :**
-```json
-{
-  "stats": {
-    "items": [
-      {
-        "number": "15M",
-        "label": "de Français ont utilisé Planity cette année"
-      },
-      {
-        "number": "130M",
-        "label": "de rendez-vous réservés\nen ligne"
-      }
-    ]
-  }
-}
-```
-
-**Exemple pour modifier les KPI personnalisés :**
-```json
-{
-  "personalStats": {
-    "kpis": [
-      {
-        "number": "178",
-        "category": "Nouveaux clients",
-        "data": "pour un chiffre d'affaires estimé à XXX €",
-        "note": "*Estimation basée sur..."
-      }
-    ]
-  }
-}
-```
-
-### 2. Générer le template
-
-```bash
-npm run generate
-```
-
-Cela compile le template Handlebars (`template.hbs`) avec les données JSON et génère `template.mjml`.
-
-**Les boucles sont dans le template !** Regardez `template.hbs` :
-- `{{#each stats.items}}` pour les statistiques
-- `{{#each kpiGroups}}` pour les KPI (groupés par 2)
-- `{{#each footer.links}}` pour les liens du footer
-
-### 3. Compiler en HTML
+### Compiler le template
 
 ```bash
 npm run build
 ```
 
-Ou manuellement :
+Cela compile `template.mjml` en `output.html`.
+
+### Mode développement avec watch
+
 ```bash
-mjml template.mjml -o output.html
+npm run dev
 ```
 
-## Avantages
+Cela lance :
+- Watch sur `template.mjml` (recompile automatiquement)
+- Serveur de prévisualisation sur `http://localhost:3000`
 
-✅ **Boucles dans le template** : Utilisez `{{#each}}` directement dans `template.hbs` (comme React !)  
-✅ **Pas de répétition** : Les statistiques et KPI sont générés automatiquement  
-✅ **Données centralisées** : Tout le contenu est dans `data.json`  
-✅ **Facile à modifier** : Changez le JSON ou ajoutez des boucles dans le template  
-✅ **Type-safe** : Structure JSON claire et organisée
+### Prévisualiser
 
-## Exemple de boucle dans template.hbs
-
-```handlebars
-{{#each stats.items}}
-<mj-column>
-  <mj-text>{{number}}</mj-text>
-  <mj-text>{{label}}</mj-text>
-</mj-column>
-{{/each}}
+```bash
+npm run preview
 ```
 
-C'est exactement comme `.map()` en React ! 🎉  
+## Caractéristiques
 
-## Structure des données
+✅ **Mobile uniquement** : Largeur fixe 393px, pas de responsive  
+✅ **Styles inline maximum** : Tous les styles sont inline sur les éléments MJML  
+✅ **MJML pur** : Pas de Handlebars, compilation directe MJML → HTML  
+✅ **Simple** : Un seul fichier template à éditer  
 
-- `hero` : Section hero (logo, sous-titre, année)
-- `intro` : Message d'introduction
-- `stats` : Statistiques 2025 (avec boucle automatique)
-- `personalStats` : KPI personnalisés (avec boucle automatique)
-- `future` : Section 2026
-- `closing` : Message de clôture
-- `footer` : Footer avec réseaux sociaux, app stores, copyright
+## Modifier le template
+
+Éditez directement `template.mjml` :
+
+- **Textes** : Modifiez directement dans le MJML
+- **Styles** : Utilisez les attributs inline sur les éléments MJML (font-size, color, padding, etc.)
+- **Images** : Modifiez les URLs dans les balises `<mj-image>`
+- **Liens** : Modifiez les `href` dans les balises `<mj-button>` et `<a>`
+
+## Structure du template
+
+1. **Hero** : Image mobile avec logo, sous-titre et année
+2. **Intro** : Message d'introduction
+3. **Stats** : Tableau avec 3 statistiques (15M, 130M, 60 000)
+4. **Bouton** : "Voir la retrospective vidéo"
+5. **Titre personnalisé** : "Ces chiffres vous donnent le sourire ?"
+6. **KPI Cards** : 4 cartes avec statistiques personnalisées
+7. **Disclaimer** : Note légale
+8. **Section Future** : "Et si 2026 allait encore plus loin ?"
+9. **Clôture** : Message de fin avec fond gris
+10. **Footer** : Réseaux sociaux, app stores, copyright et liens
+
+## Styles inline
+
+Tous les styles sont définis directement sur les éléments MJML :
+
+```xml
+<mj-text
+  font-family="Aeonik, Arial, sans-serif"
+  font-size="28px"
+  line-height="32px"
+  color="#08080B"
+  padding-bottom="24px"
+>
+  Texte
+</mj-text>
+```
 
 ## Notes
 
-- Les sauts de ligne dans le JSON (`\n`) sont automatiquement convertis en `<br />`
-- Les caractères spéciaux sont automatiquement échappés pour XML
-- Le template est responsive : les grilles s'empilent automatiquement sur mobile
-
+- Le template est optimisé pour mobile uniquement (393px de largeur)
+- Les polices Inter et Aeonik sont chargées via Google Fonts CDN
+- Tous les styles sont inline pour une meilleure compatibilité email

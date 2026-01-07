@@ -1,8 +1,7 @@
 {
-  "watch": ["template.hbs", "data.json", "generate-template.js"],
-  "ext": "hbs,json,js",
-  "ignore": ["template.mjml", "output.html", "node_modules"],
+  "watch": ["template.mjml"],
+  "ext": "mjml",
+  "ignore": ["output.html", "node_modules"],
   "exec": "npm run build",
   "verbose": true
 }
-

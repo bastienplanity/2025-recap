@@ -5,3 +5,4 @@
 - Use `<mj-style>` only for @font-face, gradients, box-shadow, and media queries
 - All comments must be in English
 - Stats: 3 columns desktop (mj-group) → 1 column mobile (media query at 700px). KPI cards: always 100% width.
+- Keep messages and explanations concise

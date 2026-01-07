@@ -1,0 +1,6 @@
+- ❌ Rendre Projet réutilisable next mail refaire structure fichier
+- ✅ Faire export d'images
+- ❌ Tester le mail sur mon email
+- ❌ FIx Warning EM
+- ❌ Fusion responsive ??
+- ❌ Fonction dynamique réflexion html

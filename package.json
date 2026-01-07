@@ -8,7 +8,7 @@
     "build": "npm run generate && mjml template.mjml -o output.html",
     "watch": "nodemon",
     "watch:build": "nodemon --watch template.hbs --watch data.json --ext hbs,json --exec \"npm run build\"",
-    "serve": "browser-sync start --server --files 'output.html' --no-open",
+    "serve": "browser-sync start --server --files 'output.html' --index output.html --no-open",
     "dev": "concurrently \"npm run watch:build\" \"npm run serve\"",
     "preview": "npm run build && npm run serve"
   },

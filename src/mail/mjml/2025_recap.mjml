@@ -28,6 +28,7 @@
       <mj-all font-family="Inter, Arial, sans-serif" />
       <mj-section padding="0" />
       <mj-column padding="0" />
+      <mj-text padding="0" />
     </mj-attributes>
   </mj-head>
 
@@ -68,13 +69,14 @@
           <mj-divider
             border-color="#EEF0F2"
             border-width="1px"
-            padding="0 0 24px"
+            padding="24px 0 24px"
           />
           <mj-text
             font-family="Aeonik, Arial, sans-serif"
             font-size="28px"
             line-height="32px"
             color="#08080B"
+            padding="0 0 24px"
           >
             2025 en quelques chiffres
           </mj-text>
@@ -163,8 +165,10 @@
             font-size="14px"
             font-weight="500"
             border-radius="8px"
-            padding="8px 12px"
+            padding="32px 0 0"
+            inner-padding="10px 24px"
             align="center"
+            width="auto"
           >
             Voir la retrospective vidéo
           </mj-button>
@@ -172,7 +176,7 @@
       </mj-section>
 
       <!-- Personal Stats Title -->
-      <mj-section padding="32px 0 16px" background-color="#FFFFFF">
+      <mj-section padding="32px 0 24px" background-color="#FFFFFF">
         <mj-column padding="0">
           <mj-text
             font-family="Aeonik, Arial, sans-serif"
@@ -353,7 +357,7 @@
       </mj-section>
 
       <!-- KPI Card 4 -->
-      <mj-section padding="0 0 16px" background-color="#FFFFFF">
+      <mj-section padding="0 0 24px" background-color="#FFFFFF">
         <mj-column
           padding="24px"
           background-color="#FFFFFF"
@@ -402,7 +406,7 @@
       </mj-section>
 
       <!-- Disclaimer -->
-      <mj-section padding="0 0 4px" background-color="#FFFFFF">
+      <mj-section padding="0 0 16px" background-color="#FFFFFF">
         <mj-column padding="0">
           <mj-text
             font-family="Aeonik, Arial, sans-serif"
@@ -431,6 +435,7 @@
             font-size="28px"
             line-height="32px"
             color="#08080B"
+            padding="0 0 24px"
           >
             Et si 2026 allait encore plus loin ?
           </mj-text>
@@ -448,7 +453,7 @@
       </mj-section>
 
       <!-- Closing Section -->
-      <mj-section padding="20px 0" background-color="#FFFFFF">
+      <mj-section padding="20px 0 10px" background-color="#FFFFFF">
         <mj-column
           padding="32px 16px"
           background-color="#EEF0F2"
@@ -468,7 +473,7 @@
       </mj-section>
 
       <!-- Footer -->
-      <mj-section padding="20px 0" background-color="#FFFFFF">
+      <mj-section padding="20px 0" background-color="#ff0000">
         <mj-column padding="32px 16px">
           <mj-text
             align="center"

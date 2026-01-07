@@ -4,3 +4,5 @@
 - ❌ FIx Warning EM
 - ❌ Fusion responsive ??
 - ❌ Fonction dynamique réflexion html
+- ❌ Repasse images Footer
+- ❌ Repasse inté

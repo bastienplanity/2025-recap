@@ -63,6 +63,16 @@
         border-radius: 24px !important;
       }
 
+      .hero-section table {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+      }
+
+      .hero-section td {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+      }
+
       @media only screen and (max-width: 700px) {
         .hero-section {
           background-image: url('https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/mobile.png') !important;
@@ -73,6 +83,16 @@
         .hero-section td[height] {
           height: 460px !important;
         }
+
+        .hero-section table {
+          padding-top: 24px !important;
+          padding-bottom: 24px !important;
+        }
+
+        .hero-section td {
+          padding-top: 24px !important;
+          padding-bottom: 24px !important;
+        }
       }
 
       /* ============================================
@@ -81,6 +101,7 @@
       .card-shadow {
         box-shadow: 0px 2px 4px -1px rgba(26, 27, 31, 0.05);
       }
+
 
       /* ============================================
          FOOTER LINKS
@@ -136,52 +157,49 @@
           width: 100% !important;
         }
 
-        /* Mobile paddings from Figma */
+        /* Mobile paddings - 24px spacing between blocks */
+        .hero-section {
+          padding-top: 24px !important;
+          padding-bottom: 24px !important;
+        }
+
         .main-wrapper {
-          padding: 16px 0 !important;
+          padding: 24px 0 0 0 !important;
         }
 
         .intro-section {
-          padding: 32px 16px !important;
-        }
-
-        .stats-section {
-          padding: 0 16px 32px 16px !important;
-        }
-
-        .button-section {
-          padding: 0 16px 32px 16px !important;
+          padding: 24px 16px !important;
         }
 
         .personal-stats-section {
-          padding: 32px 0 16px 0 !important;
+          padding: 0 0 0 0 !important;
         }
 
         .kpi-card-section {
-          padding: 0 16px 16px 16px !important;
+          padding: 0 16px 24px 16px !important;
         }
 
         .disclaimer-section {
-          padding: 0 16px 4px 16px !important;
+          padding: 0 16px 24px 16px !important;
         }
 
         .future-section {
-          padding: 32px 16px !important;
+          padding: 24px 16px !important;
         }
 
         .closing-section {
-          padding: 32px 16px !important;
+          padding: 24px 16px !important;
         }
 
         .footer-section {
-          padding: 32px 16px !important;
+          padding: 24px 16px !important;
         }
       }
     </mj-style>
   </mj-head>
 
   <mj-body>
-    <mj-section css-class="hero-section">
+    <mj-section css-class="hero-section" padding="24px 0 24px 0">
       <mj-column>
         <mj-spacer height="620px" />
       </mj-column>
@@ -242,8 +260,8 @@
         </mj-section>
     </mj-wrapper>
 
-    <mj-wrapper padding="24px 0" css-class="main-wrapper">
-      <mj-section css-class="personal-stats-section" padding="32px 0 16px 0">
+    <mj-wrapper padding="24px 0 0 0" css-class="main-wrapper">
+      <mj-section css-class="personal-stats-section" padding="0 0 0 0">
         <mj-column>
           <mj-text align="center" color="#08080B" font-size="32px" font-weight="400" line-height="36px" font-family="Aeonik, sans-serif" padding="0 0 24px 0">
             {{{nl2br personalStats.title}}}
@@ -252,7 +270,7 @@
       </mj-section>
 
       {{#each personalStats.kpis}}
-      <mj-section css-class="kpi-card-section" padding="0 0 16px 0">
+      <mj-section css-class="kpi-card-section" padding="0 0 24px 0">
         <mj-column
           background-color="#FFFFFF"
           border="1px solid #E6E6E2"
@@ -276,7 +294,7 @@
       </mj-section>
       {{/each}}
 
-      <mj-section css-class="disclaimer-section" padding="0 0 4px 0">
+      <mj-section css-class="disclaimer-section" padding="0 0 24px 0">
         <mj-column>
           <mj-text color="#869098" font-size="12px" font-weight="400" line-height="14px" font-family="Aeonik, sans-serif" align="left" padding="0">
             {{personalStats.disclaimer}}
@@ -295,6 +313,8 @@
         </mj-column>
       </mj-section>
 
+      <mj-spacer height="24px" />
+
       <mj-section background-color="#EEF0F2" border-radius="24px" padding="40px 24px" css-class="closing-section">
         <mj-column>
           <mj-text color="#202020" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="0">
@@ -304,7 +324,7 @@
       </mj-section>
     </mj-wrapper>
 
-    <mj-section css-class="footer-section" padding="32px 16px">
+    <mj-section css-class="footer-section" padding="24px 16px">
       <mj-column>
         <mj-text align="center" color="#869098" font-size="16px" font-weight="500" line-height="24px" font-family="Inter, sans-serif" padding="0 0 4px 0">
           {{footer.social.title}}

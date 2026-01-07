@@ -2,11 +2,11 @@
   "name": "mailer-template",
   "version": "1.0.0",
   "description": "Template de mail responsive Planity en MJML",
-  "main": "build.js",
+  "main": "src/scripts/build.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "node src/scripts/build.js",
     "watch": "nodemon",
-    "serve": "browser-sync start --server --files 'output.html' --index output.html --no-open",
+    "serve": "browser-sync start --server --files 'index.html,src/mail/html/*.html' --index index.html --no-open",
     "dev": "concurrently \"npm run watch\" \"npm run serve\"",
     "preview": "npm run build && npm run serve"
   },

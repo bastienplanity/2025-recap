@@ -1,8 +1,8 @@
 {
-  "watch": ["template.mjml"],
+  "watch": ["src/mail/mjml"],
   "ext": "mjml,json",
   "ignore": ["output.html", "node_modules", "*.html"],
-  "exec": "node build.js",
+  "exec": "node src/scripts/build.js",
   "verbose": true,
   "delay": 500
 }

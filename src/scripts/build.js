@@ -4,14 +4,14 @@ const path = require("path");
 
 const templatePath = path.join(
   __dirname,
-  "src",
+  "..",
   "mail",
   "mjml",
   "2025_recap.mjml"
 );
 const outputPath = path.join(
   __dirname,
-  "src",
+  "..",
   "mail",
   "html",
   "2025_recap.html"

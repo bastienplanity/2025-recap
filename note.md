@@ -10,7 +10,7 @@
 TODO 2
 
 - ✅ Repasse Footer
-- ❌ Les fonts aurent !
+- ❌ Gmail ne supporte pas les font custom (fontFace or custom web font) !
 - ❌ Images Header
 - ❌ Rélfexion responsive ?
 - ❌récup data dynamique

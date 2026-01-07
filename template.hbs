@@ -1,462 +1,227 @@
 <mjml>
   <mj-head>
-    <mj-attributes>
-      <mj-all font-family="Aeonik, sans-serif" />
-      <mj-section padding="0" />
-      <mj-column padding="0" />
-      <mj-wrapper padding="0" />
-      <mj-text padding="0" />
-      <mj-button padding="0" />
-      <mj-divider padding="0" />
-      <mj-social padding="0" />
-      <mj-image padding="0" />
-    </mj-attributes>
-
     <mj-style>
       /* ============================================
-         FONTS - Load from CDN
+         RESET CSS - Email compatible
          ============================================ */
-      @font-face {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        src: url('https://d2skjte8udjqxw.cloudfront.net/fonts/Inter/Inter-Regular.woff2') format('woff2');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      @font-face {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        src: url('https://d2skjte8udjqxw.cloudfront.net/fonts/Inter/Inter-Medium.woff2') format('woff2');
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
       }
 
-      @font-face {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        src: url('https://d2skjte8udjqxw.cloudfront.net/fonts/Inter/Inter-SemiBold.woff2') format('woff2');
+      table {
+        border-collapse: collapse !important;
+        border-spacing: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
       }
 
-      @font-face {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        src: url('https://d2skjte8udjqxw.cloudfront.net/fonts/Inter/Inter-Bold.woff2') format('woff2');
+      td {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
       }
 
-      @font-face {
-        font-family: 'Aeonik';
-        font-style: normal;
-        font-weight: 400;
-        src: url('https://d2skjte8udjqxw.cloudfront.net/fonts/Aeonik/regular.woff2') format('woff2');
+      tr {
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
-      /* ============================================
-         CARD SHADOW
-         ============================================ */
-      .card-shadow {
-        box-shadow: 0px 2px 4px -1px rgba(26, 27, 31, 0.05);
+      th {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
       }
 
-      /* ============================================
-         FOOTER LINKS
-         ============================================ */
-      .footer-link {
-        color: #869098;
+      img {
+        border: 0 !important;
+        outline: none !important;
+        text-decoration: none !important;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+        height: auto;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
         text-decoration: none;
       }
 
-      .footer-link-separator {
-        color: #C7CFD7;
-      }
-
-      /* ============================================
-         RESPONSIVE SWITCH - Desktop version
-         ============================================ */
-      .version-desktop {
-        display: block !important;
-        mso-hide: none !important;
-      }
-
-      .version-mobile {
-        display: none !important;
-        mso-hide: all !important;
-      }
-
-      /* ============================================
-         MEDIA QUERY - Switch to mobile version
-         ============================================ */
-      @media only screen and (max-width: 700px) {
-        .version-desktop {
-          display: none !important;
-          mso-hide: all !important;
-        }
-
-        .version-mobile {
-          display: block !important;
-          mso-hide: none !important;
-        }
+      ul, ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
       }
     </mj-style>
   </mj-head>
 
   <mj-body>
-    <!-- ============================================
-         DESKTOP VERSION
-         ============================================ -->
-    <mj-raw>
-      <div class="version-desktop">
-    </mj-raw>
-      <mj-section padding="24px 0 24px 0">
+    <mj-section>
+      <mj-column>
+        <mj-image
+          src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/desktop.png"
+          alt="Hero"
+        ></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <mj-wrapper>
+      <mj-section>
         <mj-column>
-          <mj-image
-            src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/desktop.png"
-            alt="Hero"
-            width="800px"
-            border-radius="24px"
-            fluid-on-mobile="true"
-          />
+          <mj-text>
+            {{intro.greeting}}<br />
+            {{{nl2br intro.text}}}<br />
+            {{intro.closing}}
+          </mj-text>
+          <mj-divider></mj-divider>
+          <mj-text>
+            {{stats.title}}
+          </mj-text>
         </mj-column>
       </mj-section>
 
-      <mj-wrapper padding="24px 0" border="1px solid #E6E6E2" border-radius="24px" background-color="#FFFFFF" css-class="intro-section main-wrapper">
-          <mj-section padding="40px 24px 0px">
-            <mj-column>
-              <mj-text color="#08080B" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="0 0 24px 0">
-                {{intro.greeting}}<br />
-                {{{nl2br intro.text}}}<br />
-                {{intro.closing}}
-              </mj-text>
-              <mj-divider border-color="#EEF0F2" border-width="1px" padding="0 0 24px 0" />
-              <mj-text color="#08080B" font-size="32px" font-weight="400" line-height="36px" font-family="Aeonik, sans-serif" align="left" padding="0 0 24px 0">
-                {{stats.title}}
-              </mj-text>
-            </mj-column>
-          </mj-section>
-
-          <mj-section padding="0 24px 32px 24px">
-            <mj-group>
-              {{#each stats.items}}
-              <mj-column
-                border-left="{{#if @first}}1px solid #E6E6E2{{else}}none{{/if}}"
-                border-right="{{#if @last}}1px solid #E6E6E2{{else}}none{{/if}}"
-                border-top="1px solid #E6E6E2"
-                border-bottom="1px solid #E6E6E2"
-                width="33.33%"
-                padding="24px"
-              >
-                <mj-text color="#625DF5" font-size="40px" font-weight="400" line-height="46px" font-family="Aeonik, sans-serif" align="left" padding="0 0 8px 0">{{number}}</mj-text>
-                <mj-text color="#202020" font-size="16px" font-weight="400" line-height="18px" font-family="Aeonik, sans-serif" align="left" padding="0">
-                  {{{nl2br label}}}
-                </mj-text>
-              </mj-column>
-              {{/each}}
-            </mj-group>
-          </mj-section>
-
-          <mj-section padding="0 24px 32px 24px">
-            <mj-column>
-              <mj-button
-                href="{{stats.button.href}}"
-                background-color="#202020"
-                color="#FFFFFF"
-                border-radius="8px"
-                font-size="14px"
-                font-weight="500"
-                font-family="Inter, sans-serif"
-                align="center"
-                padding="8px 12px"
-              >
-                {{stats.button.text}}
-              </mj-button>
-            </mj-column>
-          </mj-section>
-      </mj-wrapper>
-
-      <mj-wrapper padding="24px 0 0 0" css-class="main-wrapper">
-        <mj-section css-class="personal-stats-section" padding="0 0 0 0">
+      {{#each stats.items}}
+        <mj-section>
           <mj-column>
-            <mj-text align="center" color="#08080B" font-size="32px" font-weight="400" line-height="36px" font-family="Aeonik, sans-serif" padding="0 0 24px 0">
-              {{{nl2br personalStats.title}}}
+            <mj-text>
+              {{number}}
+            </mj-text>
+            <mj-text>
+              {{{nl2br label}}}
             </mj-text>
           </mj-column>
         </mj-section>
+      {{/each}}
 
-        {{#each personalStats.kpis}}
-        <mj-section css-class="kpi-card-section" padding="0 0 24px 0">
-          <mj-column
-            background-color="#FFFFFF"
-            border="1px solid #E6E6E2"
-            border-radius="24px"
-            css-class="card-shadow kpi-card"
-            width="100%"
-            padding="24px"
-          >
-            <mj-text color="#202020" font-size="60px" font-weight="400" line-height="68px" font-family="Aeonik, sans-serif" align="left" padding="0 0 8px 0">
-              <span style="font-size: 60px; line-height: 68px; vertical-align: baseline;">{{number}}</span><span style="font-size: 28px; line-height: 32px; vertical-align: baseline; margin-left: 8px;">{{category}}</span>
+      <mj-section>
+        <mj-column>
+          <mj-button href="{{stats.button.href}}">
+            {{stats.button.text}}
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-wrapper>
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            {{{nl2br personalStats.title}}}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      {{#each personalStats.kpis}}
+        <mj-section>
+          <mj-column>
+            <mj-text>
+              {{number}} {{category}}
             </mj-text>
-            <mj-text color="#202020" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="{{#if note}}0 0 16px 0{{else}}0{{/if}}">
+            <mj-text>
               {{{nl2br data}}}
             </mj-text>
             {{#if note}}
-            <mj-text color="#869098" font-size="14px" font-weight="400" line-height="16px" font-family="Aeonik, sans-serif" align="left" padding="0">
-              {{note}}
-            </mj-text>
+              <mj-text>
+                {{note}}
+              </mj-text>
             {{/if}}
           </mj-column>
         </mj-section>
+      {{/each}}
+
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            {{personalStats.disclaimer}}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            {{future.title}}
+          </mj-text>
+          <mj-text>
+            {{future.text}}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-wrapper>
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            {{{nl2br closing.text}}}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          {{footer.social.title}}
+        </mj-text>
+        <mj-social>
+          {{#each footer.social.links}}
+            <mj-social-element
+              name="{{name}}"
+              href="{{href}}"
+            ></mj-social-element>
+          {{/each}}
+        </mj-social>
+        <mj-text>
+          {{footer.appStores.title}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-group>
+        {{#each footer.appStores.stores}}
+          <mj-column>
+            <mj-image src="{{image}}" alt="{{name}}" href="{{href}}"></mj-image>
+          </mj-column>
         {{/each}}
+      </mj-group>
+    </mj-section>
 
-        <mj-section css-class="disclaimer-section" padding="0 0 24px 0">
-          <mj-column>
-            <mj-text color="#869098" font-size="12px" font-weight="400" line-height="14px" font-family="Aeonik, sans-serif" align="left" padding="0">
-              {{personalStats.disclaimer}}
-            </mj-text>
-          </mj-column>
-        </mj-section>
-
-        <mj-section border="1px solid #EEF0F2" border-radius="24px" padding="40px 24px 64px 24px" css-class="future-section">
-          <mj-column>
-            <mj-text color="#08080B" font-size="32px" font-weight="400" line-height="36px" font-family="Aeonik, sans-serif" align="left" padding="0 0 24px 0">
-              {{future.title}}
-            </mj-text>
-            <mj-text color="#08080B" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="0">
-              {{future.text}}
-            </mj-text>
-          </mj-column>
-        </mj-section>
-      </mj-wrapper>
-
-      <mj-wrapper padding="0 0 0 0" css-class="main-wrapper">
-        <mj-section background-color="#EEF0F2" border-radius="24px" padding="40px 24px" css-class="closing-section">
-          <mj-column>
-            <mj-text color="#202020" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="0">
-              {{{nl2br closing.text}}}
-            </mj-text>
-          </mj-column>
-        </mj-section>
-      </mj-wrapper>
-
-      <mj-section css-class="footer-section" padding="24px 16px">
-        <mj-column>
-          <mj-text align="center" color="#869098" font-size="16px" font-weight="500" line-height="24px" font-family="Inter, sans-serif" padding="0 0 4px 0">
-            {{footer.social.title}}
-          </mj-text>
-          <mj-social font-size="15px" icon-size="32px" mode="horizontal" padding="0 0 24px 0">
-            {{#each footer.social.links}}
-            <mj-social-element name="{{name}}" href="{{href}}" />
-            {{/each}}
-          </mj-social>
-          <mj-text align="center" color="#869098" font-size="16px" font-weight="500" line-height="24px" font-family="Inter, sans-serif" padding="0 0 8px 0">
-            {{footer.appStores.title}}
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-      <mj-section padding="0 16px 32px 16px">
-        <mj-group>
-          {{#each footer.appStores.stores}}
-          <mj-column>
-            <mj-image src="{{image}}" alt="{{name}}" width="107px" href="{{href}}" />
-          </mj-column>
-          {{/each}}
-        </mj-group>
-      </mj-section>
-
-      <mj-section padding="0 16px 32px 16px">
-        <mj-column>
-          <mj-text align="center" color="#869098" font-size="12px" font-weight="400" line-height="16px" font-family="Inter, sans-serif" padding="24px 0 8px 0">
-            {{footer.copyright.text}}<br />
-            {{footer.copyright.email}}<br />
-            {{footer.copyright.phone}}
-          </mj-text>
-          <mj-text align="center" color="#869098" font-size="12px" font-weight="400" line-height="16px" font-family="Inter, sans-serif" padding="0">
-            {{#each footer.links}}
-            {{#if @index}}<span class="footer-link-separator"> • </span>{{/if}}
-            <a href="{{href}}" class="footer-link">{{text}}</a>
-            {{/each}}
-          </mj-text>
-        </mj-column>
-      </mj-section>
-    <mj-raw>
-      </div>
-    </mj-raw>
-
-    <!-- ============================================
-         MOBILE VERSION
-         ============================================ -->
-    <mj-raw>
-      <div class="version-mobile">
-    </mj-raw>
-      <mj-section padding="24px 16px 24px 16px">
-        <mj-column>
-          <mj-image
-            src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/mobile.png"
-            alt="Hero"
-            border-radius="24px"
-            fluid-on-mobile="true"
-          />
-        </mj-column>
-      </mj-section>
-
-      <mj-wrapper padding="24px 16px" border="1px solid #E6E6E2" border-radius="24px" background-color="#FFFFFF" css-class="intro-section main-wrapper">
-          <mj-section padding="40px 0 0 0">
-            <mj-column>
-              <mj-text color="#08080B" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="0 0 24px 0">
-                {{intro.greeting}}<br />
-                {{{nl2br intro.text}}}<br />
-                {{intro.closing}}
-              </mj-text>
-              <mj-divider border-color="#EEF0F2" border-width="1px" padding="0 0 24px 0" />
-              <mj-text color="#08080B" font-size="32px" font-weight="400" line-height="36px" font-family="Aeonik, sans-serif" align="left" padding="0 0 24px 0">
-                {{stats.title}}
-              </mj-text>
-            </mj-column>
-          </mj-section>
-
-          {{#each stats.items}}
-          <mj-section padding="0 0 0 0">
-            <mj-column
-              border-left="1px solid #E6E6E2"
-              border-right="1px solid #E6E6E2"
-              border-top="1px solid #E6E6E2"
-              border-bottom="1px solid #E6E6E2"
-              padding="24px"
-            >
-              <mj-text color="#625DF5" font-size="40px" font-weight="400" line-height="46px" font-family="Aeonik, sans-serif" align="left" padding="0 0 8px 0">{{number}}</mj-text>
-              <mj-text color="#202020" font-size="16px" font-weight="400" line-height="18px" font-family="Aeonik, sans-serif" align="left" padding="0">
-                {{{nl2br label}}}
-              </mj-text>
-            </mj-column>
-          </mj-section>
-          {{/each}}
-
-          <mj-section padding="0 0 32px 0">
-            <mj-column>
-              <mj-button
-                href="{{stats.button.href}}"
-                background-color="#202020"
-                color="#FFFFFF"
-                border-radius="8px"
-                font-size="14px"
-                font-weight="500"
-                font-family="Inter, sans-serif"
-                align="center"
-                padding="8px 12px"
-              >
-                {{stats.button.text}}
-              </mj-button>
-            </mj-column>
-          </mj-section>
-      </mj-wrapper>
-
-      <mj-wrapper padding="24px 16px 0 16px" css-class="main-wrapper">
-        <mj-section css-class="personal-stats-section" padding="0 0 0 0">
-          <mj-column>
-            <mj-text align="center" color="#08080B" font-size="32px" font-weight="400" line-height="36px" font-family="Aeonik, sans-serif" padding="0 0 24px 0">
-              {{{nl2br personalStats.title}}}
-            </mj-text>
-          </mj-column>
-        </mj-section>
-
-        {{#each personalStats.kpis}}
-        <mj-section css-class="kpi-card-section" padding="0 0 24px 0">
-          <mj-column
-            background-color="#FFFFFF"
-            border="1px solid #E6E6E2"
-            border-radius="24px"
-            css-class="card-shadow kpi-card"
-            width="100%"
-            padding="24px"
-          >
-            <mj-text color="#202020" font-size="60px" font-weight="400" line-height="68px" font-family="Aeonik, sans-serif" align="left" padding="0 0 8px 0">
-              <span style="font-size: 60px; line-height: 68px; vertical-align: baseline;">{{number}}</span><span style="font-size: 28px; line-height: 32px; vertical-align: baseline; margin-left: 8px;">{{category}}</span>
-            </mj-text>
-            <mj-text color="#202020" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="{{#if note}}0 0 16px 0{{else}}0{{/if}}">
-              {{{nl2br data}}}
-            </mj-text>
-            {{#if note}}
-            <mj-text color="#869098" font-size="14px" font-weight="400" line-height="16px" font-family="Aeonik, sans-serif" align="left" padding="0">
-              {{note}}
-            </mj-text>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          {{footer.copyright.text}}<br />
+          {{footer.copyright.email}}<br />
+          {{footer.copyright.phone}}
+        </mj-text>
+        <mj-text>
+          {{#each footer.links}}
+            {{#if @index}}
+              •
             {{/if}}
-          </mj-column>
-        </mj-section>
-        {{/each}}
-
-        <mj-section css-class="disclaimer-section" padding="0 0 24px 0">
-          <mj-column>
-            <mj-text color="#869098" font-size="12px" font-weight="400" line-height="14px" font-family="Aeonik, sans-serif" align="left" padding="0">
-              {{personalStats.disclaimer}}
-            </mj-text>
-          </mj-column>
-        </mj-section>
-
-        <mj-section border="1px solid #EEF0F2" border-radius="24px" padding="24px 16px 48px 16px" css-class="future-section">
-          <mj-column>
-            <mj-text color="#08080B" font-size="32px" font-weight="400" line-height="36px" font-family="Aeonik, sans-serif" align="left" padding="0 0 24px 0">
-              {{future.title}}
-            </mj-text>
-            <mj-text color="#08080B" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="0">
-              {{future.text}}
-            </mj-text>
-          </mj-column>
-        </mj-section>
-      </mj-wrapper>
-
-      <mj-wrapper padding="0 16px 0 16px" css-class="main-wrapper">
-        <mj-section background-color="#EEF0F2" border-radius="24px" padding="24px 16px" css-class="closing-section">
-          <mj-column>
-            <mj-text color="#202020" font-size="20px" font-weight="400" line-height="23px" font-family="Aeonik, sans-serif" align="left" padding="0">
-              {{{nl2br closing.text}}}
-            </mj-text>
-          </mj-column>
-        </mj-section>
-      </mj-wrapper>
-
-      <mj-section css-class="footer-section" padding="24px 16px">
-        <mj-column>
-          <mj-text align="center" color="#869098" font-size="16px" font-weight="500" line-height="24px" font-family="Inter, sans-serif" padding="0 0 4px 0">
-            {{footer.social.title}}
-          </mj-text>
-          <mj-social font-size="15px" icon-size="32px" mode="horizontal" padding="0 0 24px 0">
-            {{#each footer.social.links}}
-            <mj-social-element name="{{name}}" href="{{href}}" />
-            {{/each}}
-          </mj-social>
-          <mj-text align="center" color="#869098" font-size="16px" font-weight="500" line-height="24px" font-family="Inter, sans-serif" padding="0 0 8px 0">
-            {{footer.appStores.title}}
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-      <mj-section padding="0 16px 32px 16px">
-        <mj-group>
-          {{#each footer.appStores.stores}}
-          <mj-column>
-            <mj-image src="{{image}}" alt="{{name}}" width="107px" href="{{href}}" />
-          </mj-column>
+            <a href="{{href}}">
+              {{text}}
+            </a>
           {{/each}}
-        </mj-group>
-      </mj-section>
-
-      <mj-section padding="0 16px 32px 16px">
-        <mj-column>
-          <mj-text align="center" color="#869098" font-size="12px" font-weight="400" line-height="16px" font-family="Inter, sans-serif" padding="24px 0 8px 0">
-            {{footer.copyright.text}}<br />
-            {{footer.copyright.email}}<br />
-            {{footer.copyright.phone}}
-          </mj-text>
-          <mj-text align="center" color="#869098" font-size="12px" font-weight="400" line-height="16px" font-family="Inter, sans-serif" padding="0">
-            {{#each footer.links}}
-            {{#if @index}}<span class="footer-link-separator"> • </span>{{/if}}
-            <a href="{{href}}" class="footer-link">{{text}}</a>
-            {{/each}}
-          </mj-text>
-        </mj-column>
-      </mj-section>
-    <mj-raw>
-      </div>
-    </mj-raw>
+        </mj-text>
+      </mj-column>
+    </mj-section>
   </mj-body>
 </mjml>

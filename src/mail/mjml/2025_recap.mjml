@@ -30,23 +30,23 @@
       <mj-section padding="0" />
       <mj-column padding="0" />
       <mj-text padding="0" />
+      <mj-image padding="0" />
     </mj-attributes>
   </mj-head>
 
   <mj-body background-color="#FFFFFF" width="800px">
-    <!-- Hero Section -->
-    <mj-section padding="0" background-color="#000000">
-      <mj-column padding="0">
-        <mj-image
-          src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/mobile.png"
-          alt="Hero"
-          padding="58px 0"
-          border-radius="24px"
-        />
-      </mj-column>
-    </mj-section>
-
     <mj-wrapper padding="16px">
+      <!-- Hero Section -->
+      <mj-section padding="0">
+        <mj-column padding="0">
+          <mj-image
+            src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/desktop.png"
+            alt="Hero"
+            border-radius="24px"
+          />
+        </mj-column>
+      </mj-section>
+
       <!-- Intro Section (Bloc-1) -->
       <mj-section padding="20px 0" background-color="#FFFFFF">
         <mj-column

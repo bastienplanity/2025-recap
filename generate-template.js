@@ -13,8 +13,6 @@ Handlebars.registerHelper("nl2br", function (text) {
   return new Handlebars.SafeString(text.replace(/\n/g, "<br />"));
 });
 
-// Les KPIs ne sont plus groupés, chaque KPI prend 100% de largeur
-
 // Lire le template Handlebars
 const templateSource = fs.readFileSync(
   path.join(__dirname, "template.hbs"),

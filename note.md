@@ -9,9 +9,14 @@
 
 TODO 2
 
-- ✅ Repasse Footer
+- ❌ Repasse Footer !!!!! images qui szutent
 - ❌ Gmail ne supporte pas les font custom (fontFace or custom web font) !
 - ❌ Images Header
 - ❌ Rélfexion responsive ?
 - ❌récup data dynamique
 - ❌ mettre dans des fichiers de trad
+
+- TODO 3
+
+- Test FONT MJML
+- Test Grille responsive MJML

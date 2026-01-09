@@ -406,7 +406,7 @@
       </mj-section>
 
       <!-- Closing Section -->
-      <mj-section padding="0 0 10px" background-color="#FFFFFF">
+      <mj-section padding="0" background-color="#FFFFFF">
         <mj-column
           padding="32px 16px"
           background-color="#EEF0F2"
@@ -524,7 +524,7 @@
         </mj-column>
       </mj-section>
 
-      <mj-section>
+      <mj-section padding-top="24px">
         <mj-column>
           <mj-text
             color="#869098"
@@ -534,12 +534,11 @@
             font-weight="400"
           >
             © 2026 Planity. Tous droits réservés<br />
-            contact@planity.com<br />
-            01 86 26 44 44
+            contact@planity.com 01 86 26 44 44
           </mj-text>
         </mj-column>
       </mj-section>
-      <mj-section padding-top="8px">
+      <mj-section padding-top="8px" padding-bottom="16px">
         <mj-column width="100%">
           <mj-text
             color="#869098"

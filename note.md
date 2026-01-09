@@ -81,3 +81,6 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 - ✅ Bagde store => Pareil taille pas bonne & pixélisé de zinzing
 - Devriat être sur la même ligne => contact@planity.com & 01 86 26 44 44
 - Font pas bonne et le point chelou positionné Me désinscrire & Gérer mes préférences
+
+- I18N lien !!!!!! vidéo
+- basée sur vos clients en 2025

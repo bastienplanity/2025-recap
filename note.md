@@ -67,7 +67,9 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 
 - ✅ Font
 - ✅ Container de 600px
-- ❌ Layout François
-- ❌ Images
-- ❌ Repasse Footer
+- ✅ Layout François
+- ✅ Images
+- ❌❌❌ Repasse Footer
+- Check mode Sombre
+- Container trop grand
 - ❌ I18N allemand

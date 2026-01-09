@@ -66,7 +66,7 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 ## TODO FINAL
 
 - ✅ Font
-- ❌ Container de 600px
+- ✅ Container de 600px
 - ❌ Layout François
 - ❌ Images
 - ❌ Repasse Footer

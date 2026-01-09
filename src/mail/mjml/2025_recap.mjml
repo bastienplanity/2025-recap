@@ -20,7 +20,7 @@
     </mj-attributes>
   </mj-head>
 
-  <mj-body background-color="#FFFFFF" width="640px">
+  <mj-body background-color="#FFFFFF" width="600px">
     <mj-wrapper padding="16px">
       <!-- Hero Section -->
       <mj-section padding="0">

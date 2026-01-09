@@ -424,126 +424,106 @@
           </mj-text>
         </mj-column>
       </mj-section>
+    </mj-wrapper>
 
-      <!-- Footer -->
-      <!-- Footer -->
-      <mj-section padding="32px 16px 0" background-color="#FFFFFF">
-        <mj-column padding="0">
-          <!-- Suivez-nous -->
+    <!-- Footer -->
+    <mj-wrapper padding="32px 16px" background-color="#FFFFFF">
+      <mj-section>
+        <mj-column>
           <mj-text
-            align="center"
-            font-size="16px"
-            line-height="24px"
+            font-weight="600"
             color="#869098"
-            font-weight="500"
-            padding="0 0 4px"
+            font-size="16px"
+            padding-bottom="6px"
+            line-height="24px"
+            align="center"
           >
             Suivez-nous
           </mj-text>
-        </mj-column>
-      </mj-section>
-
-      <!-- Social Icons -->
-      <mj-section padding="0 0 16px" background-color="#FFFFFF">
-        <mj-group>
-          <mj-column width="50%" padding="0">
-            <mj-image
-              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/facebook.png"
+          <mj-social padding-top="4px" icon-size="32px">
+            <mj-social-element
+              padding="0 16px 0 0"
+              icon-size="32px"
               alt="Facebook"
+              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/facebook.png"
               href="#"
-              width="48px"
-              height="48px"
-              fluid-on-mobile="false"
-              align="right"
-              padding="0 8px 0 0"
             />
-          </mj-column>
-          <mj-column width="50%" padding="0">
-            <mj-image
-              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/instagram.png"
+            <mj-social-element
+              icon-size="32px"
               alt="Instagram"
+              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/instagram.png"
               href="#"
-              width="48px"
-              height="48px"
-              fluid-on-mobile="false"
-              align="left"
-              padding="0 0 0 8px"
             />
-          </mj-column>
-        </mj-group>
-      </mj-section>
-
-      <!-- Téléchargez l'app -->
-      <mj-section padding="0" background-color="#FFFFFF">
-        <mj-column padding="0">
+          </mj-social>
           <mj-text
-            align="center"
-            font-size="16px"
-            line-height="24px"
+            font-weight="600"
             color="#869098"
-            font-weight="500"
-            padding="0 0 8px"
+            font-size="16px"
+            padding-top="24px"
+            line-height="24px"
+            align="center"
           >
             Téléchargez l'app Planity
           </mj-text>
         </mj-column>
       </mj-section>
 
-      <!-- App Stores -->
-      <mj-section padding="0 0 32px" background-color="#FFFFFF">
+      <mj-section padding-top="8px">
         <mj-group>
-          <mj-column width="50%" padding="0">
+          <mj-column width="50%" padding-right="8px">
             <mj-image
               src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/app-store.png"
               alt="App Store"
+              width="107px"
+              height="32px"
               href="#"
-              width="133px"
-              height="40px"
-              fluid-on-mobile="false"
               align="right"
-              padding="0 8px 0 0"
             />
           </mj-column>
-          <mj-column width="50%" padding="0">
+          <mj-column width="50%">
             <mj-image
               src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/google-play.png"
               alt="Google Play"
+              width="107px"
+              height="32px"
               href="#"
-              width="133px"
-              height="40px"
-              fluid-on-mobile="false"
               align="left"
-              padding="0 0 0 8px"
             />
           </mj-column>
         </mj-group>
       </mj-section>
 
-      <!-- Footer Copyright -->
-      <mj-section padding="0 16px 32px" background-color="#FFFFFF">
-        <mj-column padding="0">
+      <mj-section padding-top="24px">
+        <mj-column>
           <mj-text
-            align="center"
+            color="#869098"
             font-size="12px"
             line-height="16px"
-            color="#869098"
-            padding="0 0 8px"
+            align="center"
+            font-weight="400"
           >
             © 2026 Planity. Tous droits réservés<br />
             contact@planity.com<br />
             01 86 26 44 44
           </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="8px">
+        <mj-column width="100%">
           <mj-text
-            align="center"
+            color="#869098"
             font-size="12px"
             line-height="16px"
-            color="#869098"
+            align="center"
+            font-weight="600"
           >
-            <a href="#" style="color: #869098; text-decoration: underline"
+            <a href="#" style="color: #869098; text-decoration: none"
               >Me désinscrire</a
             >
-            <span style="color: #c7cfd7; margin: 0 8px">•</span>
-            <a href="#" style="color: #869098; text-decoration: underline"
+            <span style="color: #c7cfd7; padding: 0px 8px; font-size: 16px"
+              >•</span
+            >
+            <a href="#" style="color: #869098; text-decoration: none"
               >Gérer mes préférences</a
             >
           </mj-text>

@@ -73,3 +73,11 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 - Check mode Sombre
 - Container trop grand
 - ❌ I18N allemand
+
+- Retoru quentin
+- Image ?
+- ✅ Suivez & Télécharger devrait être en 500 et non pas en 600 font weight
+- ✅ Logo devrait êtrte en 48 pas 36 et surtout faudrait les exporté en x2 parce que la c'est pixélisé de zinzing
+- ✅ Bagde store => Pareil taille pas bonne & pixélisé de zinzing
+- Devriat être sur la même ligne => contact@planity.com & 01 86 26 44 44
+- Font pas bonne et le point chelou positionné Me désinscrire & Gérer mes préférences

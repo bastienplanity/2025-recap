@@ -1,0 +1,554 @@
+<mjml lang="fr">
+  <mj-head>
+    <mj-font
+      name="Inter"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=block"
+    />
+    <mj-font
+      name="Aeonik"
+      href="https://d2skjte8udjqxw.cloudfront.net/fonts/Aeonik/aeonik-regular.css"
+    />
+    <mj-attributes>
+      <mj-all
+        font-family="Inter, Aeonik, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+        padding="0"
+      />
+      <mj-section padding="0" />
+      <mj-column padding="0" />
+      <mj-text padding="0" />
+      <mj-image padding="0" />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body background-color="#FFFFFF" width="600px">
+    <mj-wrapper padding="16px">
+      <!-- Hero Section -->
+      <mj-section padding="0">
+        <mj-column padding="0">
+          <mj-image
+            src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/responsive-hero.png"
+            alt="Hero"
+            border-radius="24px"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- Intro Section (Bloc-1) -->
+      <mj-section padding="20px 0" background-color="#FFFFFF">
+        <mj-column
+          padding="32px 16px"
+          background-color="#FFFFFF"
+          border="1px solid #E6E6E2"
+          border-radius="24px"
+        >
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="16px"
+            line-height="18px"
+            color="#08080B"
+          >
+            Cher partenaire,<br />
+            Cette année, vous avez été à nos côtés pour accompagner des millions
+            de clients dans leurs moments beauté. Grâce à votre confiance et à
+            votre passion, Planity a continué de grandir et d'innover.<br />
+            Vous êtes au cœur de cette réussite.
+          </mj-text>
+          <mj-divider
+            border-color="#EEF0F2"
+            border-width="1px"
+            padding="24px 0 24px"
+          />
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="28px"
+            line-height="32px"
+            color="#08080B"
+            padding="0 0 24px"
+          >
+            2025 en quelques chiffres
+          </mj-text>
+
+          <!-- Stats Table -->
+          <mj-text padding="0">
+            <div style="border: 1px solid #e6e6e2; overflow: hidden">
+              <div style="padding: 24px; border-bottom: 1px solid #e6e6e2">
+                <div
+                  style="
+                    font-family: Aeonik, Inter, -apple-system,
+                      BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu,
+                      Cantarell, Helvetica Neue, sans-serif;
+                    font-size: 40px;
+                    line-height: 46px;
+                    color: #625df5;
+                    padding-bottom: 8px;
+                  "
+                >
+                  15M
+                </div>
+                <div
+                  style="
+                    font-family: Aeonik, Inter, -apple-system,
+                      BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu,
+                      Cantarell, Helvetica Neue, sans-serif;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #202020;
+                  "
+                >
+                  de Français ont utilisé Planity cette année
+                </div>
+              </div>
+              <div style="padding: 24px; border-bottom: 1px solid #e6e6e2">
+                <div
+                  style="
+                    font-family: Aeonik, Inter, -apple-system,
+                      BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu,
+                      Cantarell, Helvetica Neue, sans-serif;
+                    font-size: 40px;
+                    line-height: 46px;
+                    color: #625df5;
+                    padding-bottom: 8px;
+                  "
+                >
+                  130M
+                </div>
+                <div
+                  style="
+                    font-family: Aeonik, Inter, -apple-system,
+                      BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu,
+                      Cantarell, Helvetica Neue, sans-serif;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #202020;
+                  "
+                >
+                  de rendez-vous réservés<br />en ligne
+                </div>
+              </div>
+              <div style="padding: 24px">
+                <div
+                  style="
+                    font-family: Aeonik, Inter, -apple-system,
+                      BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu,
+                      Cantarell, Helvetica Neue, sans-serif;
+                    font-size: 40px;
+                    line-height: 46px;
+                    color: #625df5;
+                    padding-bottom: 8px;
+                  "
+                >
+                  60 000
+                </div>
+                <div
+                  style="
+                    font-family: Aeonik, Inter, -apple-system,
+                      BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu,
+                      Cantarell, Helvetica Neue, sans-serif;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #202020;
+                  "
+                >
+                  d'entre vous nous font confiance
+                </div>
+              </div>
+            </div>
+          </mj-text>
+
+          <!-- Button -->
+          <mj-button
+            href="#"
+            background-color="#202020"
+            color="#FFFFFF"
+            font-size="14px"
+            font-weight="500"
+            border-radius="8px"
+            padding="32px 0 0"
+            inner-padding="10px 24px"
+            align="center"
+          >
+            Voir la retrospective vidéo
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Personal Stats Title -->
+      <mj-section padding="32px 0 24px" background-color="#FFFFFF">
+        <mj-column padding="0">
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="28px"
+            line-height="32px"
+            color="#202020"
+          >
+            Ces chiffres vous donnent le sourire ?<br />Attendez de voir les
+            vôtres !
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- KPI Card 1 -->
+      <mj-section padding="0 0 16px" background-color="#FFFFFF">
+        <mj-column
+          padding="24px"
+          background-color="#FFFFFF"
+          border="1px solid #E6E6E2"
+          border-radius="24px"
+        >
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="56px"
+            line-height="64px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            36
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="24px"
+            line-height="27px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            Nouveaux clients
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="16px"
+            line-height="18px"
+            color="#202020"
+            padding="0"
+          >
+            Ayant pris au moins une fois rendez-vous en ligne
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- KPI Card 2 -->
+      <mj-section padding="0 0 16px" background-color="#FFFFFF">
+        <mj-column
+          padding="24px"
+          background-color="#FFFFFF"
+          border="1px solid #E6E6E2"
+          border-radius="24px"
+        >
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="56px"
+            line-height="64px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            60
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="24px"
+            line-height="27px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            Rendez-vous
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="16px"
+            line-height="18px"
+            color="#202020"
+            padding="0"
+          >
+            dont 30% pris en ligne
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- KPI Card 3 -->
+      <mj-section padding="0 0 16px" background-color="#FFFFFF">
+        <mj-column
+          padding="24px"
+          background-color="#FFFFFF"
+          border="1px solid #E6E6E2"
+          border-radius="24px"
+        >
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="56px"
+            line-height="64px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            11
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="24px"
+            line-height="27px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            Rendez-vous
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="16px"
+            line-height="18px"
+            color="#202020"
+            padding="0 0 16px"
+          >
+            Pris en dehors de vos heures d'ouverture
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="14px"
+            line-height="16px"
+            color="#869098"
+            padding="0"
+          >
+            *Entre 20h-8h et dimanches/lundis
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- KPI Card 4 -->
+      <mj-section padding="0 0 24px" background-color="#FFFFFF">
+        <mj-column
+          padding="24px"
+          background-color="#FFFFFF"
+          border="1px solid #E6E6E2"
+          border-radius="24px"
+        >
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="56px"
+            line-height="64px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            4.5
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="24px"
+            line-height="27px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            sur 5
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="16px"
+            line-height="18px"
+            color="#202020"
+            padding="0"
+          >
+            Basée sur vos avis clients
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Disclaimer -->
+      <mj-section padding="0 0 16px" background-color="#FFFFFF">
+        <mj-column padding="0">
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="12px"
+            line-height="14px"
+            color="#869098"
+          >
+            *Les montants et estimations présentés sont basés sur les données de
+            votre compte Planity pour l'année 2025 et sur des moyennes observées
+            ; ils sont fournis à titre indicatif. Pour une valorisation exacte
+            du chiffre d'affaires, consultez votre tableau de bord Planity.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Future Section -->
+      <mj-section padding="20px 0" background-color="#FFFFFF">
+        <mj-column
+          padding="32px 16px"
+          background-color="#FFFFFF"
+          border="1px solid #E6E6E2"
+          border-radius="24px"
+        >
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="28px"
+            line-height="32px"
+            color="#08080B"
+            padding="0 0 24px"
+          >
+            Et si 2026 allait encore plus loin ?
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="16px"
+            line-height="18px"
+            color="#08080B"
+          >
+            Nouveaux outils, nouvelles fonctionnalités, nouvelles
+            opportunités... Planity Pro continue de vous accompagner pour
+            développer votre activité et ravir vos clients chaque jour.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Closing Section -->
+      <mj-section padding="0" background-color="#FFFFFF">
+        <mj-column
+          padding="32px 16px"
+          background-color="#EEF0F2"
+          border-radius="24px"
+        >
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="16px"
+            line-height="18px"
+            color="#202020"
+          >
+            Toute l'équipe Planity vous souhaite une excellente année 2026,
+            remplie de succès et de beaux rendez-vous.<br /><br />Ensemble,
+            continuons à réserver en beauté.<br /><br />L'équipe Planity
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <!-- Footer -->
+    <mj-wrapper padding="32px 16px" background-color="#FFFFFF">
+      <mj-section>
+        <mj-column>
+          <mj-text
+            font-weight="500"
+            color="#869098"
+            font-size="16px"
+            padding-bottom="6px"
+            line-height="24px"
+            align="center"
+          >
+            Suivez-nous
+          </mj-text>
+          <mj-social padding-top="4px" icon-size="48px">
+            <mj-social-element
+              padding="0 16px 0 0"
+              icon-size="48px"
+              alt="Facebook"
+              src="https://res.cloudinary.com/planity/image/upload/v1673617929/mail/assets/V2/facebook.png"
+              href="#"
+            />
+            <mj-social-element
+              icon-size="48px"
+              alt="Instagram"
+              src="https://res.cloudinary.com/planity/image/upload/v1673617930/mail/assets/V2/instagram.png"
+              href="#"
+            />
+          </mj-social>
+          <mj-text
+            font-weight="500"
+            color="#869098"
+            font-size="16px"
+            padding-top="24px"
+            line-height="24px"
+            align="center"
+          >
+            Téléchargez l'app Planity
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding-top="8px">
+        <mj-column>
+          <mj-raw>
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              width="100%"
+              style="width: 100%"
+            >
+              <tr>
+                <td width="50%" align="right" style="padding-right: 8px">
+                  <a href="#" target="_blank">
+                    <img
+                      src="https://res.cloudinary.com/planity/image/upload/v1562847178/mail/apple-store_3x.png"
+                      alt="Apple Store"
+                      width="133"
+                      height="40"
+                      style="
+                        display: block;
+                        border: 0;
+                        outline: none;
+                        text-decoration: none;
+                        height: 40px;
+                        width: 133px;
+                        max-width: 100%;
+                      "
+                    />
+                  </a>
+                </td>
+                <td width="50%" align="left">
+                  <a href="#" target="_blank">
+                    <img
+                      src="https://res.cloudinary.com/planity/image/upload/v1562847178/mail/google-play_3x.png"
+                      alt="Google Play"
+                      width="133"
+                      height="40"
+                      style="
+                        display: block;
+                        border: 0;
+                        outline: none;
+                        text-decoration: none;
+                        height: 40px;
+                        width: 133px;
+                        max-width: 100%;
+                      "
+                    />
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding-top="24px">
+        <mj-column>
+          <mj-text
+            color="#869098"
+            font-size="12px"
+            line-height="16px"
+            align="center"
+            font-weight="400"
+          >
+            © 2026 Planity. Tous droits réservés<br />
+            contact@planity.com 01 86 26 44 44
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="8px" padding-bottom="16px">
+        <mj-column width="100%">
+          <mj-text
+            color="#869098"
+            font-size="12px"
+            line-height="16px"
+            align="center"
+            font-weight="600"
+          >
+            <a href="#" style="color: #869098; text-decoration: none"
+              >Me désinscrire</a
+            >
+            <span style="color: #c7cfd7; padding: 0px 8px; font-size: 16px"
+              >•</span
+            >
+            <a href="#" style="color: #869098; text-decoration: none"
+              >Gérer mes préférences</a
+            >
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

@@ -65,7 +65,10 @@
     }
   
     </style>
-    
+     
+    <style type="text/css">
+.display-none { display: none !important; }
+    </style>
     
   </head>
   <body style="word-spacing:normal;background-color:#FFFFFF;">
@@ -384,7 +387,7 @@
     
       
       <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
-        <!-- Personal Stats Title -->
+        <!-- START_DYNAMIC_SECTION --><div class="{{shouldDisplayDynamicKPIs}}"><!-- Personal Stats Title -->
           <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:568px;" width="568" bgcolor="#FFFFFF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
@@ -507,25 +510,12 @@
             
               <tr>
                 <td
-                   align="left" style="font-size:0px;padding:0 0 16px;word-break:break-word;"
-                >
-                  
-      <div
-         style="font-family:Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;font-size:16px;line-height:18px;text-align:left;color:#202020;"
-      >pour un chiffre d'affaires estimé à XXX €</div>
-    
-                </td>
-              </tr>
-            
-              <tr>
-                <td
                    align="left" style="font-size:0px;padding:0;word-break:break-word;"
                 >
                   
       <div
-         style="font-family:Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;font-size:14px;line-height:16px;text-align:left;color:#869098;"
-      >*Estimation basée sur vos rendez-vous réalisés multipliés par le
-            prix moyen des prestations</div>
+         style="font-family:Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;font-size:16px;line-height:18px;text-align:left;color:#202020;"
+      >Ayant pris au moins une fois rendez-vous en ligne</div>
     
                 </td>
               </tr>
@@ -613,7 +603,7 @@
                   
       <div
          style="font-family:Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;font-size:16px;line-height:18px;text-align:left;color:#202020;"
-      >dont X% pris en ligne</div>
+      >dont {{pct_online_appts}}% pris en ligne</div>
     
                 </td>
               </tr>
@@ -801,7 +791,7 @@
                   
       <div
          style="font-family:Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;font-size:16px;line-height:18px;text-align:left;color:#202020;"
-      >Basée sur X avis clients</div>
+      >Basée sur vos avis clients</div>
     
                 </td>
               </tr>
@@ -893,7 +883,7 @@
     
       
       <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
-        <!-- Future Section -->
+        </div><!-- END_DYNAMIC_SECTION --><!-- Future Section -->
           <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:568px;" width="568" bgcolor="#FFFFFF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
@@ -905,7 +895,7 @@
           <tbody>
             <tr>
               <td
-                 style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;"
+                 style="direction:ltr;font-size:0px;padding:{{futureSectionPaddingTop}}px 0 20px 0;text-align:center;"
               >
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:568px;" ><![endif]-->
             

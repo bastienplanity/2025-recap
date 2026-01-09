@@ -18,6 +18,9 @@
       <mj-text padding="0" />
       <mj-image padding="0" />
     </mj-attributes>
+    <mj-style>
+      .display-none { display: none !important; }
+    </mj-style>
   </mj-head>
 
   <mj-body background-color="#FFFFFF" width="600px">
@@ -172,6 +175,11 @@
         </mj-column>
       </mj-section>
 
+      <!-- START_DYNAMIC_SECTION -->
+      <mj-raw>
+        <div class="{{shouldDisplayDynamicKPIs}}">
+      </mj-raw>
+
       <!-- Personal Stats Title -->
       <mj-section padding="32px 0 24px" background-color="#FFFFFF">
         <mj-column padding="0">
@@ -218,19 +226,9 @@
             font-size="16px"
             line-height="18px"
             color="#202020"
-            padding="0 0 16px"
-          >
-            pour un chiffre d'affaires estimé à XXX €
-          </mj-text>
-          <mj-text
-            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
-            font-size="14px"
-            line-height="16px"
-            color="#869098"
             padding="0"
           >
-            *Estimation basée sur vos rendez-vous réalisés multipliés par le
-            prix moyen des prestations
+            Ayant pris au moins une fois rendez-vous en ligne
           </mj-text>
         </mj-column>
       </mj-section>
@@ -268,7 +266,7 @@
             color="#202020"
             padding="0"
           >
-            dont X% pris en ligne
+            dont {{pct_online_appts}}% pris en ligne
           </mj-text>
         </mj-column>
       </mj-section>
@@ -353,7 +351,7 @@
             color="#202020"
             padding="0"
           >
-            Basée sur X avis clients
+            Basée sur vos avis clients
           </mj-text>
         </mj-column>
       </mj-section>
@@ -375,8 +373,13 @@
         </mj-column>
       </mj-section>
 
+      <mj-raw>
+        </div>
+      </mj-raw>
+      <!-- END_DYNAMIC_SECTION -->
+
       <!-- Future Section -->
-      <mj-section padding="20px 0" background-color="#FFFFFF">
+      <mj-section padding="{{futureSectionPaddingTop}}px 0 20px 0" background-color="#FFFFFF">
         <mj-column
           padding="32px 16px"
           background-color="#FFFFFF"

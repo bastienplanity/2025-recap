@@ -8,6 +8,10 @@
       name="Aeonik"
       href="https://d2skjte8udjqxw.cloudfront.net/fonts/Aeonik/aeonik-regular.css"
     />
+    <mj-font
+      name="Nunito"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=block"
+    />
   </mj-head>
 
   <mj-body background-color="#FFFFFF">
@@ -20,7 +24,7 @@
           color="#202020"
           padding="20px 0"
         >
-          Je suis Serif
+          Les coiffeurs de la galaxie - Serif
         </mj-text>
 
         <mj-text
@@ -30,7 +34,7 @@
           color="#202020"
           padding="20px 0"
         >
-          Je suis Sans-Serif
+          Les coiffeurs de la galaxie - Sans-Serif
         </mj-text>
 
         <mj-text
@@ -40,7 +44,7 @@
           color="#202020"
           padding="20px 0"
         >
-          Je suis Inter
+          Les coiffeurs de la galaxie - Inter
         </mj-text>
 
         <mj-text
@@ -50,7 +54,97 @@
           color="#202020"
           padding="20px 0"
         >
-          Je suis Aeonik
+          Les coiffeurs de la galaxie - Aeonik
+        </mj-text>
+
+        <mj-text
+          font-family="Nunito, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - Nunito
+        </mj-text>
+
+        <mj-text
+          font-family="-apple-system, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - Apple System
+        </mj-text>
+
+        <mj-text
+          font-family="BlinkMacSystemFont, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - BlinkMacSystemFont
+        </mj-text>
+
+        <mj-text
+          font-family="Segoe UI, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - Segoe UI
+        </mj-text>
+
+        <mj-text
+          font-family="Roboto, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - Roboto
+        </mj-text>
+
+        <mj-text
+          font-family="Oxygen-Sans, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - Oxygen-Sans
+        </mj-text>
+
+        <mj-text
+          font-family="Ubuntu, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - Ubuntu
+        </mj-text>
+
+        <mj-text
+          font-family="Cantarell, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - Cantarell
+        </mj-text>
+
+        <mj-text
+          font-family="Helvetica Neue, sans-serif"
+          font-size="32px"
+          line-height="40px"
+          color="#202020"
+          padding="20px 0"
+        >
+          Les coiffeurs de la galaxie - Helvetica Neue
         </mj-text>
       </mj-column>
     </mj-section>

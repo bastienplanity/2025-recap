@@ -20,3 +20,54 @@ TODO 2
 
 - Test FONT MJML
 - Test Grille responsive MJML
+- COntainer Ilage qui s'adapte avec le texte
+
+        font-family="Inter, Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+
+## Check footer police remplacement
+
+✅
+
+- ❌ Inter
+- ❌ Aeonik
+- ✅ Apple System
+- ❌ BlinkMacSystemFont
+- ❌ Segoe UI
+- ❌ Roboto
+- ❌ Oxygen- ❌Sans
+- ❌ Ubuntu
+- ❌ Cantarell
+- ❌ Helvetica Neue
+- ❌ sans-serif
+
+## Check police remplacement
+
+- Inter
+- Aeonik
+- Nunito
+- Apple System
+- BlinkMacSystemFont
+- Segoe UI
+- Roboto
+- Oxygen-Sans
+- Ubuntu
+- Cantarell
+- Helvetica Neue
+- sans-serif
+
+# Inter
+
+Inter,Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif
+
+# Aeronik
+
+Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif
+
+## TODO FINAL
+
+- ✅ Font
+- ❌ Container de 600px
+- ❌ Layout François
+- ❌ Images
+- ❌ Repasse Footer
+- ❌ I18N allemand

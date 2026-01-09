@@ -1,0 +1,143 @@
+<mjml lang="fr">
+  <mj-head>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=block" />
+    <mj-font name="Aeonik" href="https://d2skjte8udjqxw.cloudfront.net/fonts/Aeonik/aeonik-regular.css" />
+  </mj-head>
+
+  <mj-body background-color="#FFFFFF" width="800px">
+    <mj-section padding="20px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="600" color="#625DF5" padding="0 0 20px">
+          Test Gmail - Fonts bloquées = Serif visible
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="10px 20px">
+      <mj-column>
+        <mj-text
+          font-family="Inter, serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>Inter</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="Aeonik, serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>Aeonik</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="'-apple-system', serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>-apple-system</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="BlinkMacSystemFont, serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>BlinkMacSystemFont</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="'Segoe UI', serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>Segoe UI</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="Roboto, serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>Roboto</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="Oxygen-Sans, serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>Oxygen-Sans</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="Ubuntu, serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>Ubuntu</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="Cantarell, serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>Cantarell</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="'Helvetica Neue', serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>Helvetica Neue</strong> (Font Moderne)
+        </mj-text>
+
+        <mj-text
+          font-family="sans-serif"
+          font-size="24px"
+          line-height="32px"
+          color="#202020"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>sans-serif</strong> (Font Moderne - fallback final)
+        </mj-text>
+
+        <mj-divider border-color="#E6E6E2" padding="20px 0" />
+
+        <mj-text
+          font-family="serif"
+          font-size="24px"
+          line-height="32px"
+          color="#869098"
+          padding="16px 0"
+        >
+          Les coiffeurs de la galaxie - <strong>RÉFÉRENCE SERIF</strong> (Vieille Font - si tu vois ça = font bloquée)
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+

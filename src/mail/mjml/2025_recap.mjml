@@ -202,27 +202,16 @@
             color="#202020"
             padding="0 0 8px"
           >
-            <span
-              style="
-                font-size: 56px;
-                line-height: 64px;
-                color: #202020;
-                display: inline-block;
-                vertical-align: bottom;
-              "
-              >178</span
-            >
-            <span
-              style="
-                font-size: 24px;
-                line-height: 27px;
-                color: #202020;
-                display: inline-block;
-                vertical-align: bottom;
-                margin-left: 8px;
-              "
-              >Nouveaux clients</span
-            >
+            178
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="24px"
+            line-height="27px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            Nouveaux clients
           </mj-text>
           <mj-text
             font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
@@ -261,27 +250,16 @@
             color="#202020"
             padding="0 0 8px"
           >
-            <span
-              style="
-                font-size: 56px;
-                line-height: 64px;
-                color: #202020;
-                display: inline-block;
-                vertical-align: bottom;
-              "
-              >435</span
-            >
-            <span
-              style="
-                font-size: 24px;
-                line-height: 27px;
-                color: #202020;
-                display: inline-block;
-                vertical-align: bottom;
-                margin-left: 8px;
-              "
-              >Rendez-vous</span
-            >
+            435
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="24px"
+            line-height="27px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            Rendez-vous
           </mj-text>
           <mj-text
             font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
@@ -310,27 +288,16 @@
             color="#202020"
             padding="0 0 8px"
           >
-            <span
-              style="
-                font-size: 56px;
-                line-height: 64px;
-                color: #202020;
-                display: inline-block;
-                vertical-align: bottom;
-              "
-              >234</span
-            >
-            <span
-              style="
-                font-size: 24px;
-                line-height: 27px;
-                color: #202020;
-                display: inline-block;
-                vertical-align: bottom;
-                margin-left: 8px;
-              "
-              >Rendez-vous</span
-            >
+            234
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="24px"
+            line-height="27px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            Rendez-vous
           </mj-text>
           <mj-text
             font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
@@ -368,27 +335,16 @@
             color="#202020"
             padding="0 0 8px"
           >
-            <span
-              style="
-                font-size: 56px;
-                line-height: 64px;
-                color: #202020;
-                display: inline-block;
-                vertical-align: bottom;
-              "
-              >4.5</span
-            >
-            <span
-              style="
-                font-size: 24px;
-                line-height: 27px;
-                color: #202020;
-                display: inline-block;
-                vertical-align: bottom;
-                margin-left: 8px;
-              "
-              >sur 5</span
-            >
+            4.5
+          </mj-text>
+          <mj-text
+            font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"
+            font-size="24px"
+            line-height="27px"
+            color="#202020"
+            padding="0 0 8px"
+          >
+            sur 5
           </mj-text>
           <mj-text
             font-family="Aeonik, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif"

@@ -161,6 +161,61 @@ try {
   console.log(
     "✅ de_no_dynamic.html généré (sections dynamiques complètement supprimées)"
   );
+
+  // ===== GENERATE NEW TEMPLATES (based on existing ones) =====
+  // Create export directory if it doesn't exist
+  const exportDir = path.join(outputDir, "export");
+  if (!fs.existsSync(exportDir)) {
+    fs.mkdirSync(exportDir, { recursive: true });
+  }
+
+  // Copy fr_long.html to fr_with_stats.html
+  const frWithStats = fs.readFileSync(
+    path.join(outputDir, "fr_long.html"),
+    "utf8"
+  );
+  fs.writeFileSync(
+    path.join(exportDir, "fr_with_stats.html"),
+    frWithStats,
+    "utf8"
+  );
+  console.log("✅ fr_with_stats.html généré dans export/");
+
+  // Copy fr_no_dynamic.html to fr_without_stats.html
+  const frWithoutStats = fs.readFileSync(
+    path.join(outputDir, "fr_no_dynamic.html"),
+    "utf8"
+  );
+  fs.writeFileSync(
+    path.join(exportDir, "fr_without_stats.html"),
+    frWithoutStats,
+    "utf8"
+  );
+  console.log("✅ fr_without_stats.html généré dans export/");
+
+  // Copy de_long.html to de_with_stats.html
+  const deWithStats = fs.readFileSync(
+    path.join(outputDir, "de_long.html"),
+    "utf8"
+  );
+  fs.writeFileSync(
+    path.join(exportDir, "de_with_stats.html"),
+    deWithStats,
+    "utf8"
+  );
+  console.log("✅ de_with_stats.html généré dans export/");
+
+  // Copy de_no_dynamic.html to de_without_stats.html
+  const deWithoutStats = fs.readFileSync(
+    path.join(outputDir, "de_no_dynamic.html"),
+    "utf8"
+  );
+  fs.writeFileSync(
+    path.join(exportDir, "de_without_stats.html"),
+    deWithoutStats,
+    "utf8"
+  );
+  console.log("✅ de_without_stats.html généré dans export/");
 } catch (error) {
   console.error("❌ Erreur lors de la compilation:", error.message);
   process.exit(1);

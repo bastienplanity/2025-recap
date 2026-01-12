@@ -1,6 +1,7 @@
 {
   "appleStoreImageURL": "https://res.cloudinary.com/planity/image/upload/v1693906745/mail/assets/STORES/DE-APP-STORE.png",
   "playStoreImageURL": "https://res.cloudinary.com/planity/image/upload/v1693906747/mail/assets/STORES/DE-PLAY_STORE.png",
+  "heroImageURL": "https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/responsive-hero-de.png",
   "facebookLink": "https://www.facebook.com/planitypro.de",
   "instagramProLink": "https://www.instagram.com/planitypro.de/",
   "text_contactEmail": "kontakt@planity.com",

@@ -519,8 +519,16 @@
             font-weight="400"
           >
             {{text_copyrights}}
-        <a style="color: #869098; text-decoration: none" href="mailto:{{text_contactEmail}}">{{text_contactEmail}}</a>
-        <a style="color: #869098; text-decoration: none" href="tel:{{text_contactPhoneNumber}}">{{text_contactPhoneNumber}}</a>
+            <a
+              style="color: #869098; text-decoration: none"
+              href="mailto:{{text_contactEmail}}"
+              >{{text_contactEmail}}</a
+            >
+            <a
+              style="color: #869098; text-decoration: none"
+              href="tel:{{text_contactPhoneNumber}}"
+              >{{text_contactPhoneNumber}}</a
+            >
           </mj-text>
         </mj-column>
       </mj-section>

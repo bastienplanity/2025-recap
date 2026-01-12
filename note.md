@@ -99,3 +99,4 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 - 15M => 15 Millions
 
 - de Français ont utilisé Planity cette année => d'utilisateurs sur Planity cette année
+- comment son injecté les liens de description de LA newlsletter

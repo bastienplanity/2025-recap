@@ -6,3 +6,9 @@
 - All comments must be in English
 - Stats: 3 columns desktop (mj-group) → 1 column mobile (media query at 700px). KPI cards: always 100% width.
 - Keep messages and explanations concise
+
+# Git Commit Rules
+
+- Generate concise commit messages (max 50-72 characters for the subject line)
+- Use imperative mood (e.g., "Add feature" not "Added feature" or "Adds feature")
+- Keep commit messages clear and descriptive but brief

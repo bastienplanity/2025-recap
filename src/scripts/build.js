@@ -3,14 +3,10 @@ const fs = require("fs");
 const path = require("path");
 
 const mjmlPath = path.join(__dirname, "..", "mail", "mjml", "2025_recap.mjml");
-const dataShortPath = path.join(
-  __dirname,
-  "..",
-  "..",
-  "data",
-  "data_short.json"
-);
-const dataLongPath = path.join(__dirname, "..", "..", "data", "data_long.json");
+const dataShortPath = path.join(__dirname, "..", "data", "data_short.json");
+const dataLongPath = path.join(__dirname, "..", "data", "data_long.json");
+const linksFrPath = path.join(__dirname, "..", "data", "links_fr.json");
+const i18nFrPath = path.join(__dirname, "..", "data", "i18n_fr.json");
 const outputDir = path.join(__dirname, "..", "mail", "html");
 
 function replaceVariables(
@@ -21,15 +17,7 @@ function replaceVariables(
 ) {
   let result = html;
 
-  // Replace Handlebars variables
-  if (data) {
-    Object.keys(data).forEach((key) => {
-      const regex = new RegExp(`\\{\\{${key}\\}\\}`, "g");
-      result = result.replace(regex, data[key]);
-    });
-  }
-
-  // Replace shouldDisplayDynamicKPIs
+  // Replace shouldDisplayDynamicKPIs first (before other variables)
   result = result.replace(
     /\{\{shouldDisplayDynamicKPIs\}\}/g,
     shouldDisplayDynamicKPIs
@@ -40,6 +28,16 @@ function replaceVariables(
     /\{\{futureSectionPaddingTop\}\}/g,
     futureSectionPaddingTop
   );
+
+  // Replace Handlebars variables (i18n first, then data)
+  // This allows variables like {{pct_online_appts}} inside i18n strings to be replaced
+  if (data) {
+    // First pass: replace all variables
+    Object.keys(data).forEach((key) => {
+      const regex = new RegExp(`\\{\\{${key}\\}\\}`, "g");
+      result = result.replace(regex, data[key]);
+    });
+  }
 
   return result;
 }
@@ -57,15 +55,26 @@ try {
     errors.forEach((error) => console.warn(`  - ${error.message}`));
   }
 
+  // Load links and i18n for French templates
+  const linksFr = JSON.parse(fs.readFileSync(linksFrPath, "utf8"));
+  const i18nFr = JSON.parse(fs.readFileSync(i18nFrPath, "utf8"));
+
   // Generate fr_short.html
   const dataShort = JSON.parse(fs.readFileSync(dataShortPath, "utf8"));
-  const shortHtml = replaceVariables(compiledHtml, dataShort, "", "20");
+  const dataShortWithLinks = { ...dataShort, ...linksFr, ...i18nFr };
+  const shortHtml = replaceVariables(
+    compiledHtml,
+    dataShortWithLinks,
+    "",
+    "20"
+  );
   fs.writeFileSync(path.join(outputDir, "fr_short.html"), shortHtml, "utf8");
   console.log("✅ fr_short.html généré");
 
   // Generate fr_long.html
   const dataLong = JSON.parse(fs.readFileSync(dataLongPath, "utf8"));
-  const longHtml = replaceVariables(compiledHtml, dataLong, "", "20");
+  const dataLongWithLinks = { ...dataLong, ...linksFr, ...i18nFr };
+  const longHtml = replaceVariables(compiledHtml, dataLongWithLinks, "", "20");
   fs.writeFileSync(path.join(outputDir, "fr_long.html"), longHtml, "utf8");
   console.log("✅ fr_long.html généré");
 
@@ -79,8 +88,13 @@ try {
     ""
   );
 
-  // Replace variables (no data, just remove variables or replace with empty)
-  noDynamicHtml = replaceVariables(noDynamicHtml, null, "", "0");
+  // Replace variables (no data, but include links and i18n)
+  noDynamicHtml = replaceVariables(
+    noDynamicHtml,
+    { ...linksFr, ...i18nFr },
+    "",
+    "0"
+  );
 
   // Remove any remaining Handlebars variables
   noDynamicHtml = noDynamicHtml.replace(/\{\{[^}]+\}\}/g, "");

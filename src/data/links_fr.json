@@ -1,0 +1,19 @@
+{
+  "appleStoreImageURL": "https://res.cloudinary.com/planity/image/upload/v1562847178/mail/apple-store_3x.png",
+  "playStoreImageURL": "https://res.cloudinary.com/planity/image/upload/v1562847178/mail/google-play_3x.png",
+  "facebookLink": "https://www.facebook.com/planitypro",
+  "instagramLink": "https://www.instagram.com/planityofficiel",
+  "contactEmail": "contact@planity.com",
+  "contactPhoneNumber": "+33 1 86 26 44 44",
+  "contactInternationalPhoneNumber": "+33186264444",
+  "contactPhoneNumberBis": "+32 63 68 77 77",
+  "ctaVideo": "https://www.youtube.com/shorts/7_kbzclJFik",
+  "appleStoreLink": "https://planity.onelink.me/6GTD/cc50bb5d",
+  "playStoreLink": "https://planity.onelink.me/6GTD/cc50bb5d",
+  "appleStoreLinkPro": "d1aog40unfwvwf.cloudfront.net",
+  "playStoreLinkPro": "d1aog40unfwvwf.cloudfront.net",
+  "asmUnsubscribeLink": "<%asm_group_unsubscribe_raw_url%>",
+  "asmPreferencesLink": "<%asm_preferences_raw_url%>",
+  "unsubscribe": "Me désinscrire",
+  "manageMySettings": "Gérer mes préférences"
+}

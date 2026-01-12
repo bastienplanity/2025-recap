@@ -86,5 +86,9 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 - ✅ Folder FR / DE
 - ❌Attribute padding has invalid value: {{futureSectionPaddingTop}}px 0 20px 0 for type Unit, only accepts (px, %) units and 1 to 4 value(s)
 - ✅ Clipboard copy Figma
-- ❌ Onglet Allemand
+- ✅ Onglet FR
+- ❌ Voici le lien à mettre pour le CTA retrospective FR
+
 - ❌ I18N lien !!!!!! vidéo
+
+- <br /> en dur dans le mjml

@@ -436,13 +436,13 @@
               padding="0 16px 0 0"
               icon-size="48px"
               alt="Facebook"
-              src="https://res.cloudinary.com/planity/image/upload/v1673617929/mail/assets/V2/facebook.png"
+              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/facebook.png"
               href="{{facebookLink}}"
             />
             <mj-social-element
               icon-size="48px"
               alt="Instagram"
-              src="https://res.cloudinary.com/planity/image/upload/v1673617930/mail/assets/V2/instagram.png"
+              src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/instagram.png"
               href="{{instagramLink}}"
             />
           </mj-social>

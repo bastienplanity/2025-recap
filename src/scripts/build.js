@@ -41,11 +41,24 @@ function replaceVariables(
   // Replace Handlebars variables (i18n first, then data)
   // This allows variables like {{pct_online_appts}} inside i18n strings to be replaced
   if (data) {
-    // First pass: replace all variables
-    Object.keys(data).forEach((key) => {
-      const regex = new RegExp(`\\{\\{${key}\\}\\}`, "g");
-      result = result.replace(regex, data[key]);
-    });
+    // Multiple passes to handle nested variables (e.g., {{pct_online_appts}} inside i18n strings)
+    let previousResult = "";
+    let iterations = 0;
+    const maxIterations = 10; // Safety limit to avoid infinite loops
+
+    while (result !== previousResult && iterations < maxIterations) {
+      previousResult = result;
+      iterations++;
+
+      Object.keys(data).forEach((key) => {
+        const regex = new RegExp(`\\{\\{${key}\\}\\}`, "g");
+        result = result.replace(regex, data[key]);
+      });
+    }
+
+    if (iterations >= maxIterations) {
+      console.warn("⚠️  Maximum iterations reached in replaceVariables");
+    }
   }
 
   return result;

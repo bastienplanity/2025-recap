@@ -536,15 +536,15 @@
             font-size="12px"
             line-height="16px"
             align="center"
-            font-weight="600"
+            font-weight="400"
           >
-            <a href="{{asmUnsubscribeLink}}" style="color: #869098; text-decoration: none"
+            <a href="{{asmUnsubscribeLink}}" style="color: #869098; text-decoration: underline"
               >{{unsubscribe}}</a
             >
             <span style="color: #c7cfd7; padding: 0px 8px; font-size: 16px"
               >•</span
             >
-            <a href="{{asmPreferencesLink}}" style="color: #869098; text-decoration: none"
+            <a href="{{asmPreferencesLink}}" style="color: #869098; text-decoration: underline"
               >{{manageMySettings}}</a
             >
           </mj-text>

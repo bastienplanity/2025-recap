@@ -83,8 +83,8 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 - Font pas bonne et le point chelou positionné Me désinscrire & Gérer mes préférences
 
 - ✅ basée sur vos clients en 2025
-- ❌ Folder FR / DE
+- ✅ Folder FR / DE
 - ❌Attribute padding has invalid value: {{futureSectionPaddingTop}}px 0 20px 0 for type Unit, only accepts (px, %) units and 1 to 4 value(s)
-- ❌ Clipboard copy Figma
+- ✅ Clipboard copy Figma
 - ❌ Onglet Allemand
 - ❌ I18N lien !!!!!! vidéo

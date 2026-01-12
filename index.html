@@ -164,6 +164,24 @@
         const tabs = document.querySelectorAll(".tab");
         const tabContents = document.querySelectorAll(".tab-content");
 
+        // Remove all active classes first
+        tabs.forEach((t) => t.classList.remove("active"));
+        tabContents.forEach((c) => c.classList.remove("active"));
+
+        // Set initial active tab based on URL
+        tabs.forEach((tab) => {
+          if (tab.dataset.lang === currentLang) {
+            tab.classList.add("active");
+          }
+        });
+
+        tabContents.forEach((content) => {
+          if (content.dataset.lang === currentLang) {
+            content.classList.add("active");
+          }
+        });
+
+        // Add click handlers
         tabs.forEach((tab) => {
           tab.addEventListener("click", () => {
             const lang = tab.dataset.lang;
@@ -187,19 +205,6 @@
 
             currentLang = lang;
           });
-        });
-
-        // Set initial active tab based on URL
-        tabs.forEach((tab) => {
-          if (tab.dataset.lang === currentLang) {
-            tab.classList.add("active");
-          }
-        });
-
-        tabContents.forEach((content) => {
-          if (content.dataset.lang === currentLang) {
-            content.classList.add("active");
-          }
         });
       }
 
@@ -234,12 +239,12 @@
 
     <div class="container">
       <div class="tabs">
-        <button class="tab active" data-lang="fr">Français</button>
+        <button class="tab" data-lang="fr">Français</button>
         <button class="tab" data-lang="de">Allemand</button>
       </div>
 
       <!-- French templates -->
-      <div class="tab-content active" data-lang="fr">
+      <div class="tab-content" data-lang="fr">
         <div class="templates-columns">
           <div class="template-column">
             <h2>Petit volume de données</h2>

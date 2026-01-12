@@ -299,109 +299,58 @@
         </div>
       </div>
 
-      <!-- German templates (empty for now) -->
+      <!-- German templates -->
       <div class="tab-content" data-lang="de">
         <div class="templates-columns">
           <div class="template-column">
             <h2>Petit volume de données</h2>
             <div class="buttons-container">
-              <a
-                href="#"
-                target="_blank"
-                style="opacity: 0.5; pointer-events: none"
+              <a href="src/mail/html/de_short.html" target="_blank"
                 >Ouvrir dans un nouvel onglet</a
               >
               <button
                 class="copy-btn"
-                style="opacity: 0.5; pointer-events: none"
-                disabled
+                onclick="copyHtmlToClipboard('src/mail/html/de_short.html', this)"
               >
                 Copier le HTML
               </button>
             </div>
-            <div
-              style="
-                border: 1px solid #e6e6e2;
-                border-radius: 8px;
-                padding: 40px;
-                text-align: center;
-                color: #869098;
-                min-height: 800px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <p>Work in progress</p>
-            </div>
+            <iframe src="src/mail/html/de_short.html" frameborder="0"></iframe>
           </div>
 
           <div class="template-column">
             <h2>Grand volume de données</h2>
             <div class="buttons-container">
-              <a
-                href="#"
-                target="_blank"
-                style="opacity: 0.5; pointer-events: none"
+              <a href="src/mail/html/de_long.html" target="_blank"
                 >Ouvrir dans un nouvel onglet</a
               >
               <button
                 class="copy-btn"
-                style="opacity: 0.5; pointer-events: none"
-                disabled
+                onclick="copyHtmlToClipboard('src/mail/html/de_long.html', this)"
               >
                 Copier le HTML
               </button>
             </div>
-            <div
-              style="
-                border: 1px solid #e6e6e2;
-                border-radius: 8px;
-                padding: 40px;
-                text-align: center;
-                color: #869098;
-                min-height: 800px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <p>Work in progress</p>
-            </div>
+            <iframe src="src/mail/html/de_long.html" frameborder="0"></iframe>
           </div>
 
           <div class="template-column">
             <h2>Sans données personnalisées</h2>
             <div class="buttons-container">
-              <a
-                href="#"
-                target="_blank"
-                style="opacity: 0.5; pointer-events: none"
+              <a href="src/mail/html/de_no_dynamic.html" target="_blank"
                 >Ouvrir dans un nouvel onglet</a
               >
               <button
                 class="copy-btn"
-                style="opacity: 0.5; pointer-events: none"
-                disabled
+                onclick="copyHtmlToClipboard('src/mail/html/de_no_dynamic.html', this)"
               >
                 Copier le HTML
               </button>
             </div>
-            <div
-              style="
-                border: 1px solid #e6e6e2;
-                border-radius: 8px;
-                padding: 40px;
-                text-align: center;
-                color: #869098;
-                min-height: 800px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <p>Work in progress</p>
-            </div>
+            <iframe
+              src="src/mail/html/de_no_dynamic.html"
+              frameborder="0"
+            ></iframe>
           </div>
         </div>
       </div>

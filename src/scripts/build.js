@@ -5,8 +5,17 @@ const path = require("path");
 const mjmlPath = path.join(__dirname, "..", "mail", "mjml", "2025_recap.mjml");
 const dataShortPath = path.join(__dirname, "..", "data", "data_short.json");
 const dataLongPath = path.join(__dirname, "..", "data", "data_long.json");
+const dataShortDePath = path.join(
+  __dirname,
+  "..",
+  "data",
+  "data_short_de.json"
+);
+const dataLongDePath = path.join(__dirname, "..", "data", "data_long_de.json");
 const linksFrPath = path.join(__dirname, "..", "data", "links_fr.json");
 const i18nFrPath = path.join(__dirname, "..", "data", "i18n_fr.json");
+const linksDePath = path.join(__dirname, "..", "data", "links_de.json");
+const i18nDePath = path.join(__dirname, "..", "data", "i18n_de.json");
 const outputDir = path.join(__dirname, "..", "mail", "html");
 
 function replaceVariables(
@@ -59,6 +68,11 @@ try {
   const linksFr = JSON.parse(fs.readFileSync(linksFrPath, "utf8"));
   const i18nFr = JSON.parse(fs.readFileSync(i18nFrPath, "utf8"));
 
+  // Load links and i18n for German templates
+  const linksDe = JSON.parse(fs.readFileSync(linksDePath, "utf8"));
+  const i18nDe = JSON.parse(fs.readFileSync(i18nDePath, "utf8"));
+
+  // ===== FRENCH TEMPLATES =====
   // Generate fr_short.html
   const dataShort = JSON.parse(fs.readFileSync(dataShortPath, "utf8"));
   const dataShortWithLinks = { ...dataShort, ...linksFr, ...i18nFr };
@@ -79,33 +93,72 @@ try {
   console.log("✅ fr_long.html généré");
 
   // Generate fr_no_dynamic.html (without dynamic KPIs and disclaimer)
-  // Remove the entire dynamic section completely using HTML comments as markers
-  let noDynamicHtml = compiledHtml;
-
-  // Remove everything between START_DYNAMIC_SECTION and END_DYNAMIC_SECTION
-  noDynamicHtml = noDynamicHtml.replace(
+  let noDynamicHtmlFr = compiledHtml;
+  noDynamicHtmlFr = noDynamicHtmlFr.replace(
     /<!-- START_DYNAMIC_SECTION -->[\s\S]*?<!-- END_DYNAMIC_SECTION -->/gi,
     ""
   );
-
-  // Replace variables (no data, but include links and i18n)
-  noDynamicHtml = replaceVariables(
-    noDynamicHtml,
+  noDynamicHtmlFr = replaceVariables(
+    noDynamicHtmlFr,
     { ...linksFr, ...i18nFr },
     "",
     "0"
   );
-
-  // Remove any remaining Handlebars variables
-  noDynamicHtml = noDynamicHtml.replace(/\{\{[^}]+\}\}/g, "");
-
+  noDynamicHtmlFr = noDynamicHtmlFr.replace(/\{\{[^}]+\}\}/g, "");
   fs.writeFileSync(
     path.join(outputDir, "fr_no_dynamic.html"),
-    noDynamicHtml,
+    noDynamicHtmlFr,
     "utf8"
   );
   console.log(
     "✅ fr_no_dynamic.html généré (sections dynamiques complètement supprimées)"
+  );
+
+  // ===== GERMAN TEMPLATES =====
+  // Generate de_short.html
+  const dataShortDe = JSON.parse(fs.readFileSync(dataShortDePath, "utf8"));
+  const dataShortDeWithLinks = { ...dataShortDe, ...linksDe, ...i18nDe };
+  const shortHtmlDe = replaceVariables(
+    compiledHtml,
+    dataShortDeWithLinks,
+    "",
+    "20"
+  );
+  fs.writeFileSync(path.join(outputDir, "de_short.html"), shortHtmlDe, "utf8");
+  console.log("✅ de_short.html généré");
+
+  // Generate de_long.html
+  const dataLongDe = JSON.parse(fs.readFileSync(dataLongDePath, "utf8"));
+  const dataLongDeWithLinks = { ...dataLongDe, ...linksDe, ...i18nDe };
+  const longHtmlDe = replaceVariables(
+    compiledHtml,
+    dataLongDeWithLinks,
+    "",
+    "20"
+  );
+  fs.writeFileSync(path.join(outputDir, "de_long.html"), longHtmlDe, "utf8");
+  console.log("✅ de_long.html généré");
+
+  // Generate de_no_dynamic.html (without dynamic KPIs and disclaimer)
+  let noDynamicHtmlDe = compiledHtml;
+  noDynamicHtmlDe = noDynamicHtmlDe.replace(
+    /<!-- START_DYNAMIC_SECTION -->[\s\S]*?<!-- END_DYNAMIC_SECTION -->/gi,
+    ""
+  );
+  noDynamicHtmlDe = replaceVariables(
+    noDynamicHtmlDe,
+    { ...linksDe, ...i18nDe },
+    "",
+    "0"
+  );
+  noDynamicHtmlDe = noDynamicHtmlDe.replace(/\{\{[^}]+\}\}/g, "");
+  fs.writeFileSync(
+    path.join(outputDir, "de_no_dynamic.html"),
+    noDynamicHtmlDe,
+    "utf8"
+  );
+  console.log(
+    "✅ de_no_dynamic.html généré (sections dynamiques complètement supprimées)"
   );
 } catch (error) {
   console.error("❌ Erreur lors de la compilation:", error.message);

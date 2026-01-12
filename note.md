@@ -92,3 +92,4 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 - ❌ I18N lien !!!!!! vidéo
 
 - <br /> en dur dans le mjml
+- Images playstore pas belle en allemand

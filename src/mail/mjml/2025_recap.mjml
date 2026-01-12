@@ -80,7 +80,7 @@
                     padding-bottom: 8px;
                   "
                 >
-                  15M
+                  {{statsUsersNumber}}
                 </div>
                 <div
                   style="

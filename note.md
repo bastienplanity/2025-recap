@@ -93,3 +93,9 @@ Aeonik,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu
 
 - <br /> en dur dans le mjml
 - Images playstore pas belle en allemand
+
+- i18N
+
+- 15M => 15 Millions
+
+- de Français ont utilisé Planity cette année => d'utilisateurs sur Planity cette année

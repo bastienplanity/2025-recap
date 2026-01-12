@@ -21,16 +21,9 @@ const outputDir = path.join(__dirname, "..", "mail", "html");
 function replaceVariables(
   html,
   data,
-  shouldDisplayDynamicKPIs = "",
   futureSectionPaddingTop = "20"
 ) {
   let result = html;
-
-  // Replace shouldDisplayDynamicKPIs first (before other variables)
-  result = result.replace(
-    /\{\{shouldDisplayDynamicKPIs\}\}/g,
-    shouldDisplayDynamicKPIs
-  );
 
   // Replace futureSectionPaddingTop
   result = result.replace(
@@ -92,7 +85,6 @@ try {
   const shortHtml = replaceVariables(
     compiledHtml,
     dataShortWithLinks,
-    "",
     "20"
   );
   fs.writeFileSync(path.join(outputDir, "fr_short.html"), shortHtml, "utf8");
@@ -101,7 +93,7 @@ try {
   // Generate fr_long.html
   const dataLong = JSON.parse(fs.readFileSync(dataLongPath, "utf8"));
   const dataLongWithLinks = { ...dataLong, ...linksFr, ...i18nFr };
-  const longHtml = replaceVariables(compiledHtml, dataLongWithLinks, "", "20");
+  const longHtml = replaceVariables(compiledHtml, dataLongWithLinks, "20");
   fs.writeFileSync(path.join(outputDir, "fr_long.html"), longHtml, "utf8");
   console.log("✅ fr_long.html généré");
 
@@ -114,7 +106,6 @@ try {
   noDynamicHtmlFr = replaceVariables(
     noDynamicHtmlFr,
     { ...linksFr, ...i18nFr },
-    "",
     "0"
   );
   noDynamicHtmlFr = noDynamicHtmlFr.replace(/\{\{[^}]+\}\}/g, "");
@@ -134,7 +125,6 @@ try {
   const shortHtmlDe = replaceVariables(
     compiledHtml,
     dataShortDeWithLinks,
-    "",
     "20"
   );
   fs.writeFileSync(path.join(outputDir, "de_short.html"), shortHtmlDe, "utf8");
@@ -146,7 +136,6 @@ try {
   const longHtmlDe = replaceVariables(
     compiledHtml,
     dataLongDeWithLinks,
-    "",
     "20"
   );
   fs.writeFileSync(path.join(outputDir, "de_long.html"), longHtmlDe, "utf8");
@@ -161,7 +150,6 @@ try {
   noDynamicHtmlDe = replaceVariables(
     noDynamicHtmlDe,
     { ...linksDe, ...i18nDe },
-    "",
     "0"
   );
   noDynamicHtmlDe = noDynamicHtmlDe.replace(/\{\{[^}]+\}\}/g, "");

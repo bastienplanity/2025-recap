@@ -18,9 +18,7 @@
       <mj-text padding="0" />
       <mj-image padding="0" />
     </mj-attributes>
-    <mj-style>
-      .display-none { display: none !important; }
-    </mj-style>
+    <mj-style> .display-none { display: none !important; } </mj-style>
   </mj-head>
 
   <mj-body background-color="#FFFFFF" width="600px">
@@ -172,9 +170,6 @@
       </mj-section>
 
       <!-- START_DYNAMIC_SECTION -->
-      <mj-raw>
-        <div class="{{shouldDisplayDynamicKPIs}}">
-      </mj-raw>
 
       <!-- Personal Stats Title -->
       <mj-section padding="32px 0 24px" background-color="#FFFFFF">
@@ -365,13 +360,12 @@
         </mj-column>
       </mj-section>
 
-      <mj-raw>
-        </div>
-      </mj-raw>
       <!-- END_DYNAMIC_SECTION -->
-
       <!-- Future Section -->
-      <mj-section padding="{{futureSectionPaddingTop}}px 0 20px 0" background-color="#FFFFFF">
+      <mj-section
+        padding="{{futureSectionPaddingTop}}px 0 20px 0"
+        background-color="#FFFFFF"
+      >
         <mj-column
           padding="32px 16px"
           background-color="#FFFFFF"
@@ -524,8 +518,7 @@
             align="center"
             font-weight="400"
           >
-            {{footerCopyright}}
-            {{contactEmail}} {{contactPhoneNumber}}
+            {{footerCopyright}} {{contactEmail}} {{contactPhoneNumber}}
           </mj-text>
         </mj-column>
       </mj-section>
@@ -538,13 +531,17 @@
             align="center"
             font-weight="400"
           >
-            <a href="{{asmUnsubscribeLink}}" style="color: #869098; text-decoration: underline"
+            <a
+              href="{{asmUnsubscribeLink}}"
+              style="color: #869098; text-decoration: underline"
               >{{unsubscribe}}</a
             >
             <span style="color: #c7cfd7; padding: 0px 8px; font-size: 16px"
               >•</span
             >
-            <a href="{{asmPreferencesLink}}" style="color: #869098; text-decoration: underline"
+            <a
+              href="{{asmPreferencesLink}}"
+              style="color: #869098; text-decoration: underline"
               >{{manageMySettings}}</a
             >
           </mj-text>

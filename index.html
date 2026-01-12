@@ -28,9 +28,39 @@
         z-index: 100;
       }
 
+      .tabs {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+        border-bottom: 2px solid #e6e6e2;
+        padding-bottom: 0;
+      }
+
+      .tab {
+        padding: 12px 24px;
+        background: transparent;
+        border: none;
+        border-bottom: 3px solid transparent;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        color: #869098;
+        transition: all 0.2s;
+        font-family: inherit;
+      }
+
+      .tab:hover {
+        color: #202020;
+      }
+
+      .tab.active {
+        color: #625df5;
+        border-bottom-color: #625df5;
+      }
+
       .container {
         max-width: 100%;
-        padding: 24px 40px;
+        padding: 10px;
       }
 
       .templates-columns {
@@ -102,17 +132,77 @@
         flex: 1;
       }
 
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
       @media (max-width: 768px) {
         .templates-columns {
           grid-template-columns: 1fr;
         }
 
         .container {
-          padding: 16px 20px;
+          padding: 10px;
+        }
+
+        .tabs {
+          flex-wrap: wrap;
         }
       }
     </style>
     <script>
+      // Get language from URL parameter, default to 'fr'
+      const urlParams = new URLSearchParams(window.location.search);
+      let currentLang = urlParams.get("lang") || "fr";
+
+      // Initialize tabs
+      function initTabs() {
+        const tabs = document.querySelectorAll(".tab");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const lang = tab.dataset.lang;
+
+            // Update active tab
+            tabs.forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            // Update active content
+            tabContents.forEach((content) => {
+              content.classList.remove("active");
+              if (content.dataset.lang === lang) {
+                content.classList.add("active");
+              }
+            });
+
+            // Update URL without reload
+            const newUrl = new URL(window.location);
+            newUrl.searchParams.set("lang", lang);
+            window.history.pushState({}, "", newUrl);
+
+            currentLang = lang;
+          });
+        });
+
+        // Set initial active tab based on URL
+        tabs.forEach((tab) => {
+          if (tab.dataset.lang === currentLang) {
+            tab.classList.add("active");
+          }
+        });
+
+        tabContents.forEach((content) => {
+          if (content.dataset.lang === currentLang) {
+            content.classList.add("active");
+          }
+        });
+      }
+
       async function copyHtmlToClipboard(filePath, button) {
         try {
           const response = await fetch(filePath);
@@ -134,62 +224,180 @@
           alert("Erreur lors de la copie du HTML");
         }
       }
+
+      // Initialize on page load
+      document.addEventListener("DOMContentLoaded", initTabs);
     </script>
   </head>
   <body>
     <div class="header"></div>
 
     <div class="container">
-      <div class="templates-columns">
-        <div class="template-column">
-          <h2>Petit volume de données</h2>
-          <div class="buttons-container">
-            <a href="src/mail/html/fr_short.html" target="_blank"
-              >Ouvrir dans un nouvel onglet</a
-            >
-            <button
-              class="copy-btn"
-              onclick="copyHtmlToClipboard('src/mail/html/fr_short.html', this)"
-            >
-              Copier le HTML
-            </button>
-          </div>
-          <iframe src="src/mail/html/fr_short.html" frameborder="0"></iframe>
-        </div>
+      <div class="tabs">
+        <button class="tab active" data-lang="fr">Français</button>
+        <button class="tab" data-lang="de">Allemand</button>
+      </div>
 
-        <div class="template-column">
-          <h2>Grand volume de données</h2>
-          <div class="buttons-container">
-            <a href="src/mail/html/fr_long.html" target="_blank"
-              >Ouvrir dans un nouvel onglet</a
-            >
-            <button
-              class="copy-btn"
-              onclick="copyHtmlToClipboard('src/mail/html/fr_long.html', this)"
-            >
-              Copier le HTML
-            </button>
+      <!-- French templates -->
+      <div class="tab-content active" data-lang="fr">
+        <div class="templates-columns">
+          <div class="template-column">
+            <h2>Petit volume de données</h2>
+            <div class="buttons-container">
+              <a href="src/mail/html/fr_short.html" target="_blank"
+                >Ouvrir dans un nouvel onglet</a
+              >
+              <button
+                class="copy-btn"
+                onclick="copyHtmlToClipboard('src/mail/html/fr_short.html', this)"
+              >
+                Copier le HTML
+              </button>
+            </div>
+            <iframe src="src/mail/html/fr_short.html" frameborder="0"></iframe>
           </div>
-          <iframe src="src/mail/html/fr_long.html" frameborder="0"></iframe>
-        </div>
 
-        <div class="template-column">
-          <h2>Sans données personnalisées</h2>
-          <div class="buttons-container">
-            <a href="src/mail/html/fr_no_dynamic.html" target="_blank"
-              >Ouvrir dans un nouvel onglet</a
-            >
-            <button
-              class="copy-btn"
-              onclick="copyHtmlToClipboard('src/mail/html/fr_no_dynamic.html', this)"
-            >
-              Copier le HTML
-            </button>
+          <div class="template-column">
+            <h2>Grand volume de données</h2>
+            <div class="buttons-container">
+              <a href="src/mail/html/fr_long.html" target="_blank"
+                >Ouvrir dans un nouvel onglet</a
+              >
+              <button
+                class="copy-btn"
+                onclick="copyHtmlToClipboard('src/mail/html/fr_long.html', this)"
+              >
+                Copier le HTML
+              </button>
+            </div>
+            <iframe src="src/mail/html/fr_long.html" frameborder="0"></iframe>
           </div>
-          <iframe
-            src="src/mail/html/fr_no_dynamic.html"
-            frameborder="0"
-          ></iframe>
+
+          <div class="template-column">
+            <h2>Sans données personnalisées</h2>
+            <div class="buttons-container">
+              <a href="src/mail/html/fr_no_dynamic.html" target="_blank"
+                >Ouvrir dans un nouvel onglet</a
+              >
+              <button
+                class="copy-btn"
+                onclick="copyHtmlToClipboard('src/mail/html/fr_no_dynamic.html', this)"
+              >
+                Copier le HTML
+              </button>
+            </div>
+            <iframe
+              src="src/mail/html/fr_no_dynamic.html"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- German templates (empty for now) -->
+      <div class="tab-content" data-lang="de">
+        <div class="templates-columns">
+          <div class="template-column">
+            <h2>Petit volume de données</h2>
+            <div class="buttons-container">
+              <a
+                href="#"
+                target="_blank"
+                style="opacity: 0.5; pointer-events: none"
+                >Ouvrir dans un nouvel onglet</a
+              >
+              <button
+                class="copy-btn"
+                style="opacity: 0.5; pointer-events: none"
+                disabled
+              >
+                Copier le HTML
+              </button>
+            </div>
+            <div
+              style="
+                border: 1px solid #e6e6e2;
+                border-radius: 8px;
+                padding: 40px;
+                text-align: center;
+                color: #869098;
+                min-height: 800px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <p>Work in progress</p>
+            </div>
+          </div>
+
+          <div class="template-column">
+            <h2>Grand volume de données</h2>
+            <div class="buttons-container">
+              <a
+                href="#"
+                target="_blank"
+                style="opacity: 0.5; pointer-events: none"
+                >Ouvrir dans un nouvel onglet</a
+              >
+              <button
+                class="copy-btn"
+                style="opacity: 0.5; pointer-events: none"
+                disabled
+              >
+                Copier le HTML
+              </button>
+            </div>
+            <div
+              style="
+                border: 1px solid #e6e6e2;
+                border-radius: 8px;
+                padding: 40px;
+                text-align: center;
+                color: #869098;
+                min-height: 800px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <p>Work in progress</p>
+            </div>
+          </div>
+
+          <div class="template-column">
+            <h2>Sans données personnalisées</h2>
+            <div class="buttons-container">
+              <a
+                href="#"
+                target="_blank"
+                style="opacity: 0.5; pointer-events: none"
+                >Ouvrir dans un nouvel onglet</a
+              >
+              <button
+                class="copy-btn"
+                style="opacity: 0.5; pointer-events: none"
+                disabled
+              >
+                Copier le HTML
+              </button>
+            </div>
+            <div
+              style="
+                border: 1px solid #e6e6e2;
+                border-radius: 8px;
+                padding: 40px;
+                text-align: center;
+                color: #869098;
+                min-height: 800px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <p>Work in progress</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

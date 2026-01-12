@@ -3,8 +3,14 @@ const fs = require("fs");
 const path = require("path");
 
 const mjmlPath = path.join(__dirname, "..", "mail", "mjml", "2025_recap.mjml");
-const dataShortPath = path.join(__dirname, "..", "..", "data_short.json");
-const dataLongPath = path.join(__dirname, "..", "..", "data_long.json");
+const dataShortPath = path.join(
+  __dirname,
+  "..",
+  "..",
+  "data",
+  "data_short.json"
+);
+const dataLongPath = path.join(__dirname, "..", "..", "data", "data_long.json");
 const outputDir = path.join(__dirname, "..", "mail", "html");
 
 function replaceVariables(

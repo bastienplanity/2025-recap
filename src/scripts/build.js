@@ -57,19 +57,19 @@ try {
     errors.forEach((error) => console.warn(`  - ${error.message}`));
   }
 
-  // Generate short.html
+  // Generate fr_short.html
   const dataShort = JSON.parse(fs.readFileSync(dataShortPath, "utf8"));
   const shortHtml = replaceVariables(compiledHtml, dataShort, "", "20");
-  fs.writeFileSync(path.join(outputDir, "short.html"), shortHtml, "utf8");
-  console.log("✅ short.html généré");
+  fs.writeFileSync(path.join(outputDir, "fr_short.html"), shortHtml, "utf8");
+  console.log("✅ fr_short.html généré");
 
-  // Generate long.html
+  // Generate fr_long.html
   const dataLong = JSON.parse(fs.readFileSync(dataLongPath, "utf8"));
   const longHtml = replaceVariables(compiledHtml, dataLong, "", "20");
-  fs.writeFileSync(path.join(outputDir, "long.html"), longHtml, "utf8");
-  console.log("✅ long.html généré");
+  fs.writeFileSync(path.join(outputDir, "fr_long.html"), longHtml, "utf8");
+  console.log("✅ fr_long.html généré");
 
-  // Generate no_dynamic.html (without dynamic KPIs and disclaimer)
+  // Generate fr_no_dynamic.html (without dynamic KPIs and disclaimer)
   // Remove the entire dynamic section completely using HTML comments as markers
   let noDynamicHtml = compiledHtml;
 
@@ -86,21 +86,13 @@ try {
   noDynamicHtml = noDynamicHtml.replace(/\{\{[^}]+\}\}/g, "");
 
   fs.writeFileSync(
-    path.join(outputDir, "no_dynamic.html"),
+    path.join(outputDir, "fr_no_dynamic.html"),
     noDynamicHtml,
     "utf8"
   );
   console.log(
-    "✅ no_dynamic.html généré (sections dynamiques complètement supprimées)"
+    "✅ fr_no_dynamic.html généré (sections dynamiques complètement supprimées)"
   );
-
-  // Generate 2025_recap.html (base template)
-  fs.writeFileSync(
-    path.join(outputDir, "2025_recap.html"),
-    compiledHtml,
-    "utf8"
-  );
-  console.log("✅ 2025_recap.html généré");
 } catch (error) {
   console.error("❌ Erreur lors de la compilation:", error.message);
   process.exit(1);

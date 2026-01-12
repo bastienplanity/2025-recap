@@ -423,7 +423,7 @@
             line-height="24px"
             align="center"
           >
-            {{footerFollowUs}}
+            {{text_followUs}}
           </mj-text>
           <mj-social padding-top="4px" icon-size="48px">
             <mj-social-element
@@ -437,7 +437,7 @@
               icon-size="48px"
               alt="Instagram"
               src="https://planity-assets-shared-lab.s3.eu-west-1.amazonaws.com/pro/mailer/2025_recap/instagram.png"
-              href="{{instagramLink}}"
+              href="{{instagramProLink}}"
             />
           </mj-social>
           <mj-text
@@ -448,7 +448,7 @@
             line-height="24px"
             align="center"
           >
-            {{footerDownloadApp}}
+            {{text_downloadPlanityApp}}
           </mj-text>
         </mj-column>
       </mj-section>
@@ -518,7 +518,9 @@
             align="center"
             font-weight="400"
           >
-            {{footerCopyright}} {{contactEmail}} {{contactPhoneNumber}}
+            {{text_copyrights}}
+        <a style="color: #869098; text-decoration: none" href="mailto:{{text_contactEmail}}">{{text_contactEmail}}</a>
+        <a style="color: #869098; text-decoration: none" href="tel:{{text_contactPhoneNumber}}">{{text_contactPhoneNumber}}</a>
           </mj-text>
         </mj-column>
       </mj-section>
@@ -542,7 +544,7 @@
             <a
               href="{{asmPreferencesLink}}"
               style="color: #869098; text-decoration: underline"
-              >{{manageMySettings}}</a
+              >{{text_manageMySettings}}</a
             >
           </mj-text>
         </mj-column>

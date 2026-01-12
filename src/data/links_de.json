@@ -2,9 +2,9 @@
   "appleStoreImageURL": "https://res.cloudinary.com/planity/image/upload/v1693906745/mail/assets/STORES/DE-APP-STORE.png",
   "playStoreImageURL": "https://res.cloudinary.com/planity/image/upload/v1693906747/mail/assets/STORES/DE-PLAY_STORE.png",
   "facebookLink": "https://www.facebook.com/planitypro.de",
-  "instagramLink": "https://www.instagram.com/planitypro.de/",
-  "contactEmail": "kontakt@planity.com",
-  "contactPhoneNumber": "+49 211 41872888",
+  "instagramProLink": "https://www.instagram.com/planitypro.de/",
+  "text_contactEmail": "kontakt@planity.com",
+  "text_contactPhoneNumber": "+49 211 41872888",
   "contactInternationalPhoneNumber": "+49 211 41873011",
   "contactPhoneNumberBis": "+49 211 41872888",
   "ctaVideo": "",
@@ -15,5 +15,5 @@
   "asmUnsubscribeLink": "<%asm_group_unsubscribe_raw_url%>",
   "asmPreferencesLink": "<%asm_preferences_raw_url%>",
   "unsubscribe": "Abmelden",
-  "manageMySettings": "Meine Einstellungen verwalten"
+  "text_manageMySettings": "Meine Einstellungen verwalten"
 }

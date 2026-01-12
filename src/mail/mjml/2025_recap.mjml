@@ -107,7 +107,7 @@
                     padding-bottom: 8px;
                   "
                 >
-                  130M
+                  {{statsAppointmentsNumber}}
                 </div>
                 <div
                   style="

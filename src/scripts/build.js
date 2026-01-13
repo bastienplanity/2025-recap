@@ -18,11 +18,7 @@ const linksDePath = path.join(__dirname, "..", "data", "links_de.json");
 const i18nDePath = path.join(__dirname, "..", "data", "i18n_de.json");
 const outputDir = path.join(__dirname, "..", "mail", "html");
 
-function replaceVariables(
-  html,
-  data,
-  futureSectionPaddingTop = "20"
-) {
+function replaceVariables(html, data, futureSectionPaddingTop = "20") {
   let result = html;
 
   // Replace futureSectionPaddingTop
@@ -81,18 +77,19 @@ try {
   // ===== FRENCH TEMPLATES =====
   // Generate fr_short.html
   const dataShort = JSON.parse(fs.readFileSync(dataShortPath, "utf8"));
-  const dataShortWithLinks = { ...dataShort, ...linksFr, ...i18nFr };
-  const shortHtml = replaceVariables(
-    compiledHtml,
-    dataShortWithLinks,
-    "20"
-  );
+  const dataShortWithLinks = {
+    ...dataShort,
+    ...linksFr,
+    ...i18nFr,
+    lang: "fr",
+  };
+  const shortHtml = replaceVariables(compiledHtml, dataShortWithLinks, "20");
   fs.writeFileSync(path.join(outputDir, "fr_short.html"), shortHtml, "utf8");
   console.log("✅ fr_short.html généré");
 
   // Generate fr_long.html
   const dataLong = JSON.parse(fs.readFileSync(dataLongPath, "utf8"));
-  const dataLongWithLinks = { ...dataLong, ...linksFr, ...i18nFr };
+  const dataLongWithLinks = { ...dataLong, ...linksFr, ...i18nFr, lang: "fr" };
   const longHtml = replaceVariables(compiledHtml, dataLongWithLinks, "20");
   fs.writeFileSync(path.join(outputDir, "fr_long.html"), longHtml, "utf8");
   console.log("✅ fr_long.html généré");
@@ -105,7 +102,7 @@ try {
   );
   noDynamicHtmlFr = replaceVariables(
     noDynamicHtmlFr,
-    { ...linksFr, ...i18nFr },
+    { ...linksFr, ...i18nFr, lang: "fr" },
     "0"
   );
   noDynamicHtmlFr = noDynamicHtmlFr.replace(/\{\{[^}]+\}\}/g, "");
@@ -121,7 +118,12 @@ try {
   // ===== GERMAN TEMPLATES =====
   // Generate de_short.html
   const dataShortDe = JSON.parse(fs.readFileSync(dataShortDePath, "utf8"));
-  const dataShortDeWithLinks = { ...dataShortDe, ...linksDe, ...i18nDe };
+  const dataShortDeWithLinks = {
+    ...dataShortDe,
+    ...linksDe,
+    ...i18nDe,
+    lang: "de",
+  };
   const shortHtmlDe = replaceVariables(
     compiledHtml,
     dataShortDeWithLinks,
@@ -132,12 +134,13 @@ try {
 
   // Generate de_long.html
   const dataLongDe = JSON.parse(fs.readFileSync(dataLongDePath, "utf8"));
-  const dataLongDeWithLinks = { ...dataLongDe, ...linksDe, ...i18nDe };
-  const longHtmlDe = replaceVariables(
-    compiledHtml,
-    dataLongDeWithLinks,
-    "20"
-  );
+  const dataLongDeWithLinks = {
+    ...dataLongDe,
+    ...linksDe,
+    ...i18nDe,
+    lang: "de",
+  };
+  const longHtmlDe = replaceVariables(compiledHtml, dataLongDeWithLinks, "20");
   fs.writeFileSync(path.join(outputDir, "de_long.html"), longHtmlDe, "utf8");
   console.log("✅ de_long.html généré");
 
@@ -149,7 +152,7 @@ try {
   );
   noDynamicHtmlDe = replaceVariables(
     noDynamicHtmlDe,
-    { ...linksDe, ...i18nDe },
+    { ...linksDe, ...i18nDe, lang: "de" },
     "0"
   );
   noDynamicHtmlDe = noDynamicHtmlDe.replace(/\{\{[^}]+\}\}/g, "");
